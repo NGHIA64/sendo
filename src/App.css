@@ -54,13 +54,13 @@ html {
   position: relative;
 }
 .logo {
-  width: 100%;
   display: block;
   cursor: pointer;
   align-items: center;
   display: flex;
 }
 .form-search {
+  display: flex;
 }
 .sign-in {
 }

@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from './img/logo.svg'
+import menu from './img/menu.svg'
 function App() {
   return (
     <div className="App">
@@ -20,10 +21,12 @@ function App() {
         <div className="bottom-header">
           <div className="content">
             <div className="logo">
-              <img src={logo} height='48px'/>
+              <img src={logo} height='48px' width='100%' />
             </div>
             <div className="form-search">
-              <div></div>
+              <div>
+                <img src={menu}/>
+              </div>
               <form>
                 <input />
                 <button></button>
