@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-.App {
+body {
       -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     background-color: #fafafa;
@@ -32,14 +32,15 @@ html{
   display: flex;
   font-weight: 700;
   font-size: 12px;
-  line-height: 1.6rem;
+  
   
 }
 .top-header > div > div {
   margin-right: 24px;
   cursor: pointer;
   position: relative;
-  font-family: Roboto, sans-serif;;
+  font-family: Roboto, sans-serif;
+  line-height: 1.6rem;
 }
 .bottom-header {
 }
