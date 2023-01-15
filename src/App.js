@@ -1,16 +1,18 @@
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <div className="content">
-        <div className="header">
-          <div className="top-header">
-            <div>Tai ung dung</div>
-            <div>Tai ung dung</div>
-            <div>Tai ung dung</div>
+      <div className="header">
+        <div className="top-header">
+          <div className="content">
+            <div>Tải ứng dụng</div>
+            <div>Chăm sóc khách hàng</div>
+            <div>Kiểm tra đơn hàng</div>
           </div>
-          <div className="bottom-header">
+        </div>
+        <div className="bottom-header">
+          <div className="content">
             <div className="logo"></div>
             <div className="form-search">
               <div></div>
@@ -25,7 +27,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="main">
+      </div>
+      <div className="main">
+        <div className="content">
           <div className="main-header">
             <div></div>
             <div></div>
@@ -41,7 +45,9 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="footer">
+      </div>
+      <div className="footer">
+        <div className="content">
           <div className="footer-ads">
             <div></div>
             <div></div>
