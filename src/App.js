@@ -1,19 +1,27 @@
 import "./App.css";
-
+import logo from './img/logo.svg'
 function App() {
   return (
     <div className="App">
       <div className="header">
         <div className="top-header">
           <div className="content">
-            <div>Tải ứng dụng</div>
-            <div>Chăm sóc khách hàng</div>
-            <div>Kiểm tra đơn hàng</div>
+            <div>
+              <span>Tải ứng dụng</span>
+            </div>
+            <div>
+              <span>Chăm sóc khách hàng</span>
+            </div>
+            <div>
+              <span>Kiểm tra đơn hàng</span>
+            </div>
           </div>
         </div>
         <div className="bottom-header">
           <div className="content">
-            <div className="logo"></div>
+            <div className="logo">
+              <img src={logo} height='48px'/>
+            </div>
             <div className="form-search">
               <div></div>
               <form>

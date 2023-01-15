@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 body {
-      -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    background-color: #fafafa;
-    color: #0f1e29;
-    font-family: Roboto,sans-serif;
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.8rem;
-    margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fafafa;
+  color: #0f1e29;
+  font-family: Roboto, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  margin: 0;
 }
-html{
+html {
   font-size: 10px;
 }
 .content {
@@ -32,19 +32,33 @@ html{
   display: flex;
   font-weight: 700;
   font-size: 12px;
-  
-  
 }
 .top-header > div > div {
   margin-right: 24px;
   cursor: pointer;
   position: relative;
   font-family: Roboto, sans-serif;
+  display: block;
+}
+.top-header > div > div > span {
   line-height: 1.6rem;
+  display: inline;
 }
 .bottom-header {
+  background-color: #ee2e23;
+}
+.bottom-header > div {
+  align-items: center;
+  display: flex;
+  height: 64px;
+  position: relative;
 }
 .logo {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
 }
 .form-search {
 }
