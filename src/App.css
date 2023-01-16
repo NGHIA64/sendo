@@ -125,11 +125,17 @@ html {
 .main {
 }
 .main-header {
-
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+  display: block;
+  line-height: 18px;
+}
+.main-header-1{
+  height: 32px;
 }
 .main-header-1 > a{
   color: #0f62fe;
-  font-weight: 500;
 }
 .main-header-1 > span{
   color: #6f787e;
