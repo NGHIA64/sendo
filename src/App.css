@@ -312,10 +312,11 @@ html {
   display: block;
   border-radius: 4px;
 }
-.branch-ads{
+.branch-ads-name{
   color: rgb(111, 120, 126);
   font-weight: 400;
   padding: 12px;
+  font-size: 16px;
 }
 .list-ads-product{
   padding-top: 12px;
@@ -372,9 +373,49 @@ html {
   border-radius: 0 0 8px 8px;
 }
 .branch-ads{
+  padding: 0;
+  letter-spacing: normal;
+  text-align: left !important;
+  color: #0f1e29;
+  font-weight: 500;
+  margin-bottom: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.branch-ads > img{
+  margin-right: 4px;
+  width: 33px;
+  height: 12px;
+  object-fit: contain;
+  vertical-align: baseline;
+}
+.old-price{
+  height: 1.6rem;
+}
+.price{
+  color: #ee2624;
+  font-weight: 700;
+  font-size: 16px;
 
 }
-.na
+.numbers-sale{
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+.star{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  color: #0f1e29;
+}
+.star > span > svg{
+  align-items: center;
+  vertical-align: middle;
+}
 .all-products {
 }
 .footer {
