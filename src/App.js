@@ -280,7 +280,8 @@ function App() {
                         </div>
                         <div className="deitail-product">
                           <span className="branch-ads">
-                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />     Giày Sneaker VNS Old Màu Đen Nam
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                            Giày Sneaker VNS Old Màu Đen Nam
                           </span>
                           <div className="old-price"></div>
                           <div className="price">175.000đ</div>
@@ -310,11 +311,12 @@ function App() {
                     <a>
                       <div>
                         <div className="img-ads-product">
-                          <img src="https://media3.scdn.vn/img2/2017/12_27/FUoShO_simg_3eb0ac_844-844-37-9_cropf_simg_de2fe0_250x250_maxb.jpg" />
+                          <img src="https://media3.scdn.vn/img4/2021/03_20/a4wA6d4nJ4WM3f33Cjv8_simg_de2fe0_250x250_maxb.jpg" />
                         </div>
                         <div className="deitail-product">
                           <span className="branch-ads">
-                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />     Giày Sneaker VNS Old Màu Đen Nam
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                            Giày Sneaker VNS Old Màu Đen Nam
                           </span>
                           <div className="old-price"></div>
                           <div className="price">175.000đ</div>
@@ -344,11 +346,12 @@ function App() {
                     <a>
                       <div>
                         <div className="img-ads-product">
-                          <img src="https://media3.scdn.vn/img2/2017/12_27/FUoShO_simg_3eb0ac_844-844-37-9_cropf_simg_de2fe0_250x250_maxb.jpg" />
+                          <img src="https://media3.scdn.vn/img4/2021/01_01/HfV0lvYLJZjqZCOzH9t0_simg_de2fe0_250x250_maxb.jpg" />
                         </div>
                         <div className="deitail-product">
                           <span className="branch-ads">
-                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />     Giày Sneaker VNS Old Màu Đen Nam
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                            Giày Sneaker VNS Old Màu Đen Nam
                           </span>
                           <div className="old-price"></div>
                           <div className="price">175.000đ</div>
@@ -378,11 +381,12 @@ function App() {
                     <a>
                       <div>
                         <div className="img-ads-product">
-                          <img src="https://media3.scdn.vn/img2/2017/12_27/FUoShO_simg_3eb0ac_844-844-37-9_cropf_simg_de2fe0_250x250_maxb.jpg" />
+                          <img src="https://media3.scdn.vn/img4/2021/04_03/9zhzd88dsrFURZdnoqyl_simg_de2fe0_250x250_maxb.jpg" />
                         </div>
                         <div className="deitail-product">
                           <span className="branch-ads">
-                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />     Giày Sneaker VNS Old Màu Đen Nam
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                            Giày Sneaker VNS Old Màu Đen Nam
                           </span>
                           <div className="old-price"></div>
                           <div className="price">175.000đ</div>
@@ -412,11 +416,12 @@ function App() {
                     <a>
                       <div>
                         <div className="img-ads-product">
-                          <img src="https://media3.scdn.vn/img2/2017/12_27/FUoShO_simg_3eb0ac_844-844-37-9_cropf_simg_de2fe0_250x250_maxb.jpg" />
+                          <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
                         </div>
                         <div className="deitail-product">
                           <span className="branch-ads">
-                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />     Giày Sneaker VNS Old Màu Đen Nam
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                            Giày Sneaker VNS Old Màu Đen Nam
                           </span>
                           <div className="old-price"></div>
                           <div className="price">175.000đ</div>
@@ -442,9 +447,477 @@ function App() {
                       </div>
                     </a>
                   </div>
+                  <button className="previous-ads">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                        d="M10.786 12 16 17.524 14.607 19 8 12l6.607-7L16 6.476z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <button className="next-ads">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                        d="M13.214 12 8 6.476 9.393 5 16 12l-6.607 7L8 17.524z"
+                      ></path>
+                    </svg>
+                  </button>
                 </div>
               </div>
-              <div className="all-products"></div>
+              <div className="all-products">
+                <div className="ads-product-item">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div className="ads-product-item main-product">
+                  <a className="main-product">
+                    <div>
+                      <div className="img-ads-product">
+                        <img src="https://media3.scdn.vn/img4/2021/02_20/a4u8ix3clwWA4csAB7V7_simg_de2fe0_250x250_maxb.jpg" />
+                      </div>
+                      <div className="deitail-product">
+                        <span className="branch-ads">
+                          <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />{" "}
+                          Giày Sneaker VNS Old Màu Đen Nam
+                        </span>
+                        <div className="old-price"></div>
+                        <div className="price">175.000đ</div>
+                        <div className="tra-gop">
+                          <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                          Trả góp Kredivo
+                        </div>
+                        <div className="numbers-sale">Đã bán 125</div>
+                        <div className="star">
+                          <span>
+                            4.6/5{" "}
+                            <svg
+                              width="12"
+                              height="12"
+                              aria-hidden="true"
+                              fill="#ffc600"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <title>First star</title>
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                          </span>
+                          <div className="adress">TP.HCM</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                
+              </div>
+              <div className="footer-sidebar">
+                <button className="btn-xem-them-product">Xem thêm</button>
+              </div>
             </div>
           </div>
         </div>

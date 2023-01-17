@@ -154,7 +154,7 @@ html {
   align-items: stretch;
   width: 1308px;
   min-height: 853.2px;
-  height: 1223.19px;
+  height: 100%;
   box-sizing: border-box;
 }
 .sidebar-left {
@@ -311,6 +311,7 @@ html {
   margin-top: 16px;
   display: block;
   border-radius: 4px;
+  position: relative;
 }
 .branch-ads-name{
   color: rgb(111, 120, 126);
@@ -319,8 +320,8 @@ html {
   font-size: 16px;
 }
 .list-ads-product{
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 6px;
+  padding-bottom: 14px;
   display: block;
   position: relative;
   margin-left: 0px;
@@ -366,6 +367,7 @@ html {
 .img-ads-product > img{
   height: 100%;
   width: 100%;
+  border-radius: 4px;
 }
 .deitail-product{
   padding: 16px 8px 8px 8px;
@@ -416,7 +418,85 @@ html {
   align-items: center;
   vertical-align: middle;
 }
+.previous-ads{
+  padding: 7px;
+  left: 0;
+  z-index: 7;
+  top: 50%;
+  cursor: auto;
+  position: absolute;
+  height: 4rem;
+  opacity: .1;
+  right: auto;
+  border: 1px solid #fff;
+  align-items: center;
+  border-radius: 4px;
+}
+.next-ads{
+  transform: translate(-0.8rem, -50%);
+  opacity: .1;
+  padding: 7px;
+  right: 0;
+  z-index: 7;
+  top: 50%;
+  cursor: auto;
+  position: absolute;
+  height: 4rem;
+  left: auto;
+  border: 1px solid #fff;
+  align-items: center;
+  border-radius: 4px;
+}
+.tra-gop{
+  background-color: rgb(241, 243, 249);
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 20px;
+  align-items: center;
+  align-content: stretch;
+  display: flex;
+  font-weight: 400;
+  width: fit-content;
+  font-size: 11px;
+  border-radius: 4px;
+}
+.tra-gop > img{
+  height: 12px;
+  width: 12px;
+}
+.tra-gop > span{
+  margin-left: 4px;
+  color: rgb(19, 48, 150);
+}
 .all-products {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
+  width: calc(100% + 1.6rem);
+}
+.main-product{
+  padding-top: 8px;
+}
+.btn-xem-them-product{
+  font-weight: 700;
+  padding: 10px 127px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #3f4b53;
+  border-radius: 4px;
+}
+.footer-sidebar{
+  padding-top: 8px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;
+  justify-content: center;
 }
 .footer {
 }
