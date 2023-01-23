@@ -12,7 +12,7 @@
 }
 html{
     font-size: 62.5%;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
@@ -32,4 +32,21 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+}
+.top-header{
+    background-color: #d52220;   
+}
+.top-header > div{
+    display: flex;
+    height: 3.2rem;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.top-header-item{
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.6rem;
+    margin-right: 2.4rem;
 }
