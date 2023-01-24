@@ -225,6 +225,13 @@ html {
         padding-right: 1.6rem;
     }
 }
+@media (min-width: 0px) and (max-width: 575px){
+    .content {
+        max-width: 100%;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+}
 
 .top-header {
     background-color: #d52220;
