@@ -232,14 +232,20 @@ html {
         padding-right: 1.6rem;
     }
 }
+.section{
+    align-items: center;
+    display: flex;
+}
+.block{
+    background-color: #fff;
+    border-radius: 4px;
+}
 
 .top-header {
     background-color: #d52220;
 }
 
 .top-header-item {
-    display: flex;
-    align-items: center;
     height: 3.2rem;
     position: relative;
 }
@@ -248,6 +254,16 @@ html {
     color: #fff;
     font-weight: 700;
     font-size: 12px;
-    line-height: 1.6rem;
+    line-height: 1.6rem !important;
     margin-right: 2.4rem;
+}
+.bottom-header{
+    background-color: #ee2624;
+}
+.bottom-header-item{
+    height: 6.4rem;
+}
+
+img, svg{
+    vertical-align: middle;
 }
