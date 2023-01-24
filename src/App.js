@@ -16,7 +16,7 @@ function App() {
         <div className="bottom-header">
           <div className="bottom-header-item content section">
             <div className="logo">
-              <img src={logo} height="48px" width="100%" />
+              <img src={logo} />
             </div>
             <div className="form-search section">
               <div className="menu">
@@ -24,7 +24,7 @@ function App() {
               </div>
               <form className="search-form">
                 <input className="input-search block" value="giày nam" />
-                <button className="btn-search">
+                <button className="btn-search block">
                   <svg
                     width="24"
                     height="24"
@@ -47,7 +47,9 @@ function App() {
               <div className="cart">
                 <img src={cart} />
               </div>
-              <button className="btn-sign-in">Đăng nhập</button>
+              <div className="btn-sign-in">
+              <button className="block">Đăng nhập</button>
+              </div>
             </div>
           </div>
         </div>

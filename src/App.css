@@ -273,13 +273,23 @@ html {
     height: 6.4rem;
     width: 100%;
 }
+.logo{
+    width: auto;
+    margin-right: 22px;
+}
 
-.logo {}
+.logo > img{
+    width: 87px;
+    height: 48px;
+}
 
 .menu {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     margin-right: 0.8rem;
+}
+.form-search{
+    width: 100%;
 }
 .search-form{
     display: flex;
@@ -290,9 +300,34 @@ html {
     border: none;
     outline: 0;
     padding: 0.8rem 1.6rem;
+    margin-right: 0.4rem;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(63, 75, 83);
 }
 .btn-search{
-    
+    padding: 0.7rem;
+    border: 1px solid #fff;
+}
+.sign-in{
+}
+
+.cart{
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+}
+.btn-sign-in > button{
+    font-weight: 700;
+    padding: 0.6rem 1.6rem;
+    border: 1px solid #fff;
+    color: #3f4b53;
+    width: 101.2px;
+    font-size: 14px;
+    height: 32.05px;
+}
+.btn-sign-in{
+    width: 103px;
 }
 img,
 svg {
