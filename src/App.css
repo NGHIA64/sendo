@@ -273,12 +273,13 @@ html {
     height: 6.4rem;
     width: 100%;
 }
-.logo{
+
+.logo {
     width: auto;
     margin-right: 22px;
 }
 
-.logo > img{
+.logo>img {
     width: 87px;
     height: 48px;
 }
@@ -288,14 +289,17 @@ html {
     padding-right: 0.8rem;
     margin-right: 0.8rem;
 }
-.form-search{
+
+.form-search {
     width: 100%;
 }
-.search-form{
+
+.search-form {
     display: flex;
     width: 100%;
 }
-.input-search{
+
+.input-search {
     width: 100%;
     border: none;
     outline: 0;
@@ -306,18 +310,20 @@ html {
     font-weight: 400;
     color: rgb(63, 75, 83);
 }
-.btn-search{
+
+.btn-search {
     padding: 0.7rem;
     border: 1px solid #fff;
 }
-.sign-in{
-}
 
-.cart{
+.sign-in {}
+
+.cart {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
 }
-.btn-sign-in > button{
+
+.btn-sign-in>button {
     font-weight: 700;
     padding: 0.6rem 1.6rem;
     border: 1px solid #fff;
@@ -326,13 +332,61 @@ html {
     font-size: 14px;
     height: 32.05px;
 }
-.btn-sign-in{
+
+.btn-sign-in {
     width: 103px;
 }
+
 img,
 svg {
     vertical-align: middle;
 }
-button, input {
+
+button,
+input {
     overflow: visible;
+}
+
+.body {
+    background-color: #f2f3f4;
+}
+
+.top-body {
+    padding-top:1.6rem;
+    padding-bottom:1.6rem;
+    font-size: 1.4rem;
+}
+
+.top-body-title {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: #6f787e;
+    line-height: 11px;
+}
+
+.top-body-title>a {
+    color: #0f62fe;
+    padding-right: 0.8rem;
+    font-size: 14px;
+   
+}
+.top-body-title>span {
+    padding-left: 0.8rem;
+    color: #6f787e;
+    padding-right: 0.8rem;
+    font-size: 14px;
+}
+.top-body-result{
+    height: 24px;
+    line-height: 1.8rem;
+    color: #0f1e29;
+}
+.top-body-result>span {
+    font-weight: 700;
+    font-size: 20px;
+    color: #0f1e29;
+    margin-right: 0.8rem;
+    line-height: 22px;
 }

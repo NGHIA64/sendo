@@ -48,8 +48,22 @@ function App() {
                 <img src={cart} />
               </div>
               <div className="btn-sign-in">
-              <button className="block">Đăng nhập</button>
+                <button className="block">Đăng nhập</button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="body">
+        <div className="content">
+          <div className="top-body">
+            <div className="top-body-title">
+              <a>Sendo.vn</a>
+              /
+              <span>Kết quả tìm kiếm</span>
+            </div>
+            <div className="top-body-result">
+              <span>giày nam</span>Tìm thấy hơn 10.000 sản phẩm
             </div>
           </div>
         </div>
