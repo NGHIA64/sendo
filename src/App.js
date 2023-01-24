@@ -18,12 +18,12 @@ function App() {
             <div className="logo">
               <img src={logo} height="48px" width="100%" />
             </div>
-            <div className="form-search">
+            <div className="form-search section">
               <div className="menu">
                 <img src={menu} />
               </div>
               <form className="search-form">
-                <input className="input-search" value="giày nam" />
+                <input className="input-search block" value="giày nam" />
                 <button className="btn-search">
                   <svg
                     width="24"
@@ -43,7 +43,7 @@ function App() {
                 </button>
               </form>
             </div>
-            <div className="sign-in">
+            <div className="sign-in section">
               <div className="cart">
                 <img src={cart} />
               </div>
