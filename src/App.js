@@ -492,7 +492,16 @@ function App() {
               </div>
               <hr />
             </div>
-            <div className="left-body"></div>
+            <div className="left-body">
+              <div className="sort">
+                <span>Sắp xếp theo:</span>
+                <div className="block">
+                  <div>Đề cử</div>
+                  <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" class="d7ed-SwZDZ2 d7ed-OBpTEp"><path fill="#6F787E" fill-rule="nonzero" d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"></path></svg>
+                </div>
+              </div>
+              
+            </div>
           </div>
         </div>
         <div className="btn-scroll-to-top block">

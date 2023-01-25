@@ -197,7 +197,9 @@ html {
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
 }
-
+.header{
+    width: 100%;
+}
 .content {
     width: 100%;
     margin: 0 auto;
@@ -428,14 +430,13 @@ input {
 .right-body{
     background-color: #fff;
     border-radius: 8px;
-    width: 20.6rem;
     overflow-y: scroll;
     min-height: 80vh;
     max-height: 90vh;
     margin-right: 2.4rem;
+    width: 250.01px;
 }
 .right-body::-webkit-scrollbar{
-    
     border-radius: 4px;
     width: 0.4rem;
 }
@@ -504,3 +505,40 @@ hr{
     border: none;
     margin: 0;
 }
+.left-body{
+    width: 100%;    
+}
+.sort{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    
+}
+.sort > span{
+    margin-right: 0.8rem;
+    color: #0f1e29;
+    font-weight: 400;
+    font-size: 14px;
+}
+.sort > div{
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #cfd2d4;
+    box-shadow: 0 0 0 1px transparent;
+    align-items: center;
+    font-size: 14px;
+    color: #6f787e;
+    /* padding: 0.7rem ; */
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    justify-content: space-between;
+    width: 100%;
+    flex-basis: 16.6666666667%;
+    flex-grow: 0;    
+}
+
+/*  */
+
+
