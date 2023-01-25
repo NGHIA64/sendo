@@ -390,12 +390,6 @@ input {
     margin-right: 0.8rem;
     line-height: 22px;
 }
-.main-body{
-
-}
-.right-body{
-
-}
 .btn-scroll-to-top{
     bottom: 8.8rem;
     right: 52px;
@@ -412,6 +406,7 @@ input {
 }
 .btn-chat-support{
     position: fixed;
+    bottom: 2.4rem;
     right: 2.4rem;
     background-color: #3f81fe;
     cursor: pointer;
@@ -426,4 +421,16 @@ input {
     color: #fff;
     font-size: 14px;
     padding-left: 0.8rem;
+}
+.main-body{
+    display: flex;
+}
+.right-body{
+    background-color: #fff;
+    border-radius: 8px;
+    width: 20.6rem;
+    top: 8rem;
+    min-height: 80vh;
+    max-height: 90vh;
+    margin-right: 2.4rem;
 }

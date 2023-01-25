@@ -67,6 +67,7 @@ function App() {
           </div>
           <div className="main-body">
             <div className="right-body"></div>
+            <div className="left-body"></div>
           </div>
         </div>
         <div className="btn-scroll-to-top block">
