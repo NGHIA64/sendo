@@ -429,8 +429,78 @@ input {
     background-color: #fff;
     border-radius: 8px;
     width: 20.6rem;
-    top: 8rem;
+    overflow-y: scroll;
     min-height: 80vh;
     max-height: 90vh;
     margin-right: 2.4rem;
+}
+.right-body::-webkit-scrollbar{
+    
+    border-radius: 4px;
+    width: 0.4rem;
+}
+
+.right-body::-webkit-scrollbar-thumb {
+    background-color: #cfd2d4;
+}
+
+.item-filter{
+    padding: 1.2rem 0.4rem;
+}
+.header-filter{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.header-filter > span{
+    margin-left: 1.2rem;
+    color: #0f1e29;
+    font-weight: 700;
+    font-size: 14px;
+}
+.header-filter > button{
+    padding: 0.7rem;
+    border: 1px solid rgb(255, 255, 255);
+}
+.body-filter{
+    margin-top: 0.8rem;
+}
+.body-filter-item{
+    align-items: center;
+    display: flex;
+    padding: 0.4rem 0.8rem 0.4rem 1.2rem;
+}
+.body-filter-item > svg{
+    
+}
+.body-filter-item > span{
+    font-size: 14px;
+    color: #3f4b53;
+    margin-left: 0.8rem;
+    max-width: calc(100% - 3.2rem);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.footer-filter{
+    display: flex;
+    align-items: center;
+    margin-top: 0.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid #fff;
+    justify-content: center;
+}
+.footer-filter > span{
+    margin-left: 0.8rem;
+    font-size: 14px;
+    color: #3f4b53;
+    font-weight: 700;
+}
+hr{
+    height: 1px;
+    background-color: #e7e8ea;
+    border: none;
+    margin: 0;
 }
