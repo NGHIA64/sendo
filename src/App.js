@@ -1657,21 +1657,21 @@ function App() {
               </div>
               <div className="key-word">
                 <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
-                <span>Đồng Hồ</span>
+                <span>SHOPPING Mall</span>
+                <span>Thế Giới Di Động</span>
+                <span>Bánh Trung Thu Kinh Đô</span>
+                <span>Black Friday</span>
+                <span>Tivi</span>
+                <span>Mỹ phẩm hàn quốc</span>
+                <span>Kem chống nắng</span>
+                <span>Chợ Tốt</span>
+                <span>Shopee</span>
+                <span>Corona Virus</span>
+                <span>Đồ chơi nấu ăn</span>
+                <span>Laptop</span>
+                <span>iPhone 6</span>
+                <span>Bàn phím cơ</span>
+                <span>Quạt</span>
                 <span>Đồng Hồ</span>
               </div>
             </div>
