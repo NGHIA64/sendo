@@ -182,10 +182,6 @@ template {
 /*# sourceMappingURL=normalize.min.css.map */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-:root {
-    --white-color: #fff;
-    --black-color: #000 --text-color: #333
-}
 
 * {
     box-sizing: inherit;
@@ -196,6 +192,13 @@ html {
     line-height: 1.8rem;
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+    background: #cfd2d4;
+    border-radius: 4px;
 }
 
 .header {
@@ -568,6 +571,8 @@ hr {
     margin-top: 1.6rem;
     background-color: #fff;
     border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .ads-product>span {
@@ -586,7 +591,7 @@ hr {
     padding-top: 0.4rem;
     padding-bottom: 1.2rem;
     height: 352.9px;
-    overflow: hidden;
+    width: 121.8%;
 }
 
 .product-item {
@@ -595,10 +600,11 @@ hr {
     border-radius: 8px;
     margin-right: 1.6rem;
     position: relative;
+    background-color: #fff;
 }
 
 .product-item>img {
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     width: 100%;
 }
 .info-product{
@@ -638,23 +644,63 @@ hr {
     color: #ee2624;
     font-weight: 700;
     font-size: 16px;
+    line-height: 2.2rem;
 }
 .sold{
-    margin-top: 0.4rem;
+    /* margin-top: 0.4rem; */
     color: #0f1e29;
     font-size: 11px;
 }
 .quality{
     display: flex;
     justify-content: space-between;
+    height: 12px;
 }
 .quality > div{
     display: flex;
     align-items: center;
+    line-height: 1.2rem;
 }
 .quality > div > span{
     font-weight: 400;
     font-size: 11px;
     color: #0f1e29;
     margin-right: 0.4rem;
+    line-height: 1.2rem;
+}
+.all-product{
+    display: flex;
+    margin-top: 8px;
+    padding-bottom: 1.2rem;
+    width: 121.8%;
+    flex-wrap: wrap;
+}
+.all-product > a{
+    transform: none;
+    width: 203px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.tra-gop{
+  background-color: rgb(241, 243, 249);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 16px;
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  width: fit-content;
+  font-size: 11px;
+  border-radius: 4px;
+  color: rgb(19, 48, 150);
+  margin-bottom: 3px;
+  line-height: 1.2rem;
+}
+.tra-gop > img{
+  height: 12px;
+  width: 12px;
+  margin-right: 0.4rem;
 }
