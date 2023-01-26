@@ -1633,46 +1633,49 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="footer-top-search">
-          <div className="content">
-            <div className="main-search-footer">
-              <div className="search-title">
-                <span>TOP TÌM KIẾM</span>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  version="1.1"
-                  xlink="http://www.w3.org/1999/xlink"
-                  class="d7ed-SwZDZ2"
-                >
-                  <path
-                    fill="#6F787E"
-                    fill-rule="nonzero"
-                    d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
-                  ></path>
-                </svg>
-              </div>
-              <div className="key-word">
-                <span>Đồng Hồ</span>
-                <span>SHOPPING Mall</span>
-                <span>Thế Giới Di Động</span>
-                <span>Bánh Trung Thu Kinh Đô</span>
-                <span>Black Friday</span>
-                <span>Tivi</span>
-                <span>Mỹ phẩm hàn quốc</span>
-                <span>Kem chống nắng</span>
-                <span>Chợ Tốt</span>
-                <span>Shopee</span>
-                <span>Corona Virus</span>
-                <span>Đồ chơi nấu ăn</span>
-                <span>Laptop</span>
-                <span>iPhone 6</span>
-                <span>Bàn phím cơ</span>
-                <span>Quạt</span>
-                <span>Đồng Hồ</span>
+          <div className="footer-top-search">
+            <div className="content">
+              <div className="main-search-footer">
+                <div className="search-title">
+                  <span>TOP TÌM KIẾM</span>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xlink="http://www.w3.org/1999/xlink"
+                    class="d7ed-SwZDZ2"
+                  >
+                    <path
+                      fill="#6F787E"
+                      fill-rule="nonzero"
+                      d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div className="key-word">
+                  <span>Đồng Hồ</span>
+                  <span>SHOPPING Mall</span>
+                  <span>Thế Giới Di Động</span>
+                  <span>Bánh Trung Thu Kinh Đô</span>
+                  <span>Black Friday</span>
+                  <span>Tivi</span>
+                  <span>Mỹ phẩm hàn quốc</span>
+                  <span>Kem chống nắng</span>
+                  <span>Chợ Tốt</span>
+                  <span>Shopee</span>
+                  <span>Corona Virus</span>
+                  <span>Đồ chơi nấu ăn</span>
+                  <span>Laptop</span>
+                  <span>iPhone 6</span>
+                  <span>Bàn phím cơ</span>
+                  <span>Quạt</span>
+                  <span>Đồng Hồ</span>
+                  <span>Tivi</span>
+                  <span>Laptop</span>
+                  <span>Bàn phím</span>
+                </div>
               </div>
             </div>
           </div>
