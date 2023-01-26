@@ -193,9 +193,11 @@ html {
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
 }
+
 ::-webkit-scrollbar {
     width: 0.8rem;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #cfd2d4;
     border-radius: 4px;
@@ -607,100 +609,325 @@ hr {
     border-radius: 8px;
     width: 100%;
 }
-.info-product{
+
+.info-product {
     position: relative;
     padding: 1.6rem 0.8rem 0.8rem 0.8rem;
 }
-.branch > img{
+
+.branch>img {
     height: 16px;
     position: absolute;
     top: 0;
-    transform: translate(-8px,-50%);
+    transform: translate(-8px, -50%);
 }
-.name > img{
+
+.name>img {
     height: 12px;
     margin-right: 0.4rem;
     vertical-align: baseline;
 }
-.name > span{
+
+.name>span {
     margin-bottom: 0.4rem;
     font-size: 14px;
     color: #0f1e29;
 }
-.sale{
+
+.sale {
     display: flex;
 }
-.sale > span{
+
+.sale>span {
     margin-right: 0.4rem;
     font-size: 11px;
     color: #b7bbbf;
     text-decoration: line-through;
 }
-.sale > div{
+
+.sale>div {
     color: #ee2624;
     font-size: 12px;
 }
-.price{
+
+.price {
     color: #ee2624;
     font-weight: 700;
     font-size: 16px;
     line-height: 2.2rem;
 }
-.sold{
+
+.sold {
     /* margin-top: 0.4rem; */
     color: #0f1e29;
     font-size: 11px;
 }
-.quality{
+
+.quality {
     display: flex;
     justify-content: space-between;
     height: 12px;
 }
-.quality > div{
+
+.quality>div {
     display: flex;
     align-items: center;
     line-height: 1.2rem;
 }
-.quality > div > span{
+
+.quality>div>span {
     font-weight: 400;
     font-size: 11px;
     color: #0f1e29;
     margin-right: 0.4rem;
     line-height: 1.2rem;
 }
-.all-product{
+
+.all-product {
     display: flex;
     margin-top: 8px;
     padding-bottom: 1.2rem;
     width: 121.8%;
     flex-wrap: wrap;
 }
-.all-product > a{
+
+.all-product>a {
     transform: none;
     width: 203px;
     border: none;
     margin-top: 8px;
     margin-bottom: 8px;
 }
-.tra-gop{
-  background-color: rgb(241, 243, 249);
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
-  height: 16px;
-  align-items: center;
-  display: flex;
-  font-weight: 400;
-  width: fit-content;
-  font-size: 11px;
-  border-radius: 4px;
-  color: rgb(19, 48, 150);
-  margin-bottom: 3px;
-  line-height: 1.2rem;
+
+.tra-gop {
+    background-color: rgb(241, 243, 249);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 16px;
+    align-items: center;
+    display: flex;
+    font-weight: 400;
+    width: fit-content;
+    font-size: 11px;
+    border-radius: 4px;
+    color: rgb(19, 48, 150);
+    margin-bottom: 3px;
+    line-height: 1.2rem;
 }
-.tra-gop > img{
-  height: 12px;
-  width: 12px;
-  margin-right: 0.4rem;
+
+.tra-gop>img {
+    height: 12px;
+    width: 12px;
+    margin-right: 0.4rem;
 }
+
+.btn-xem-them-product {
+    font-weight: 700;
+    padding: 10px 127px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #3f4b53;
+    border-radius: 4px;
+}
+
+.footer-sidebar {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-sidebar {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-ads-item {
+    padding: 16px 30px;
+    margin: 0px 34px;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.title-footer-ads {
+    color: #0f1e29;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.detail-footer-ads {
+    font-weight: 400;
+    color: #6f787e;
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer {
+    display: block;
+}
+
+.footer-ads-item>img {
+    height: 88px;
+    width: 130px;
+}
+
+.footer-ads {
+    padding: 16px;
+    display: flex;
+}
+
+.footer-about {
+    background-color: #f2f3f4;
+    padding-bottom: 2.4rem;
+    padding-top: 2.4rem;
+
+}
+
+.main-about {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-about {
+    margin-bottom: 12px;
+    color: #0f1e29;
+    font-weight: 700;
+}
+
+.detail-about {
+    margin-bottom: 8px;
+    color: #0f1e29;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.img-about {
+    margin-right: 8px;
+    margin-top: 8px;
+    width: 120px;
+    height: 40px;
+}
+
+.list-img-about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-item {
+    width: 400px;
+}
+
+.footer-contact {
+    padding-top: 24px;
+    padding-right: 24px;
+    background-color: #27343e;
+}
+
+.left-contact {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    width: 550px;
+}
+
+.right-contact {
+    display: block;
+    margin-left: 106px;
+}
+
+.name-company {
+    color: #fff;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.detail-company {
+    padding-bottom: 12px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.policy>img {
+    margin-right: 20px;
+    width: 108px;
+    height: 33px;
+}
+
+.main-contact {
+    display: flex;
+    justify-content: start;
+}
+
+.title-contact {
+    margin-bottom: 12px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.form-contact {
+    display: flex;
+}
+
+.form-contact>input {
+    border-radius: 4px;
+    width: 320px;
+    border: none;
+    padding: 8px;
+}
+
+.form-contact>button {
+    background-color: #ee2624;
+    border: 1px solid #ee2624;
+    margin-left: 4px;
+    padding: 6px 16px;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    width: 108px;
+}
+
+.main-search-footer {
+    padding: 24px;
+    background-color: #fff;
+}
+
+.key-word>span {
+    margin-right: 16px;
+    margin-top: 8px;
+    color: rgb(15, 98, 254);
+}
+
+.footer-top-search {
+    background-color: #fff;
+}
+
+.search-title {
+    margin-bottom: 4px;
+}
+
+.search-title>span {
+    font-weight: 700;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.search-title>svg {
+    vertical-align: middle;
+    align-items: center;
+}
+html, body {margin: 0; height: 100%; overflow-x: hidden}
