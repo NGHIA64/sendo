@@ -846,7 +846,7 @@ body {
 
 .footer-about {
     background-color: #f2f3f4;
-    padding-bottom: 2.4rem;
+    padding-bottom: 2.2rem;
     padding-top: 2.4rem;
 }
 
@@ -854,6 +854,7 @@ body {
     margin-bottom: 12px;
     color: #0f1e29;
     font-weight: 700;
+    font-size: 12px;
 }
 
 .detail-about {
