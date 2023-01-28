@@ -442,6 +442,7 @@ input {
 
 .main-body {
     display: flex;
+    padding-bottom: 2.4rem;
 }
 
 .right-body {
@@ -452,6 +453,8 @@ input {
     max-height: 90vh;
     margin-right: 2.4rem;
     width: 250.01px;
+    position: sticky;
+    top: 0rem;
 }
 
 .right-body::-webkit-scrollbar {
@@ -732,7 +735,7 @@ hr {
 }
 
 .footer-sidebar {
-    padding-top: 0.8rem;
+    padding-top: 1.2rem;
     padding-bottom: 2.4rem;
     display: flex;
     align-items: stretch;
