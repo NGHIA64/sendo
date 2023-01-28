@@ -1505,9 +1505,9 @@ function App() {
         </div>
       </div>
       <div className="footer">
-        <div className="content">
-          <div className="footer-ads">
-            <a className="footer-ads-item">
+        <div className="footer-ads">
+          <div className="content section">
+          <a className="footer-ads-item">
               <img src="https://media3.scdn.vn/img4/2020/12_16/gJwXr6FFZKZCGKWaz4RB.png" />
               <div className="title-footer-ads">Siêu nhiều hàng tốt</div>
               <div className="detail-footer-ads">
@@ -1536,42 +1536,40 @@ function App() {
           </div>
         </div>
         <div className="footer-about">
-          <div className="content">
-            <div className="main-about">
-              <div className="about-item">
+          <div className="content section footer-item-about">
+          <div className="about-item">
                 <div className="title-about">VỀ CHÚNG TÔI</div>
                 <div>
                   <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
+                  <div className="detail-about">Giới thiệu SenMall</div>
+                  <div className="detail-about">Quy chế hoạt động</div>
+                  <div className="detail-about">Chính sách bảo mật</div>
+                  <div className="detail-about">Giao hàng và nhận hàng</div>
                 </div>
               </div>
               <div className="about-item">
-                <div className="title-about">VỀ CHÚNG TÔI</div>
+                <div className="title-about">DÀNH CHO NGƯỜI MUA</div>
                 <div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
+                  <div className="detail-about">Giài quyết khiếu nại</div>
+                  <div className="detail-about">Hướng dẫn mua hàng</div>
+                  <div className="detail-about">Chính sách đổi trả</div>
+                  <div className="detail-about">Chăm sóc khách hàng</div>
+                  <div className="detail-about">Nạp tiền điện thoại</div>
                 </div>
               </div>
               <div className="about-item">
-                <div className="title-about">VỀ CHÚNG TÔI</div>
+                <div className="title-about">DÀNH CHO NGƯỜI BÁN</div>
                 <div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
+                  <div className="detail-about">Quy định với người bán</div>
+                  <div className="detail-about">Chính sách bán hàng</div>
+                  <div className="detail-about">Hệ thống tiêu chí kiểm duyệt</div>
+                  <div className="detail-about">Mở shop trên Sendo</div>
                 </div>
               </div>
               <div className="about-item">
-                <div className="title-about">VỀ CHÚNG TÔI</div>
+                <div className="title-about">TẢI ỨNG DỤNG SENDO</div>
                 <div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
+                  <div className="detail-about">Mang thế giới mua sắm của Sendo trong tầm tay bạn</div>
                   <div className="list-img-about">
                     <img
                       src="https://media3.scdn.vn/img4/2020/12_16/5lUTWdk3DXr8nlC9MDII.png"
@@ -1588,13 +1586,11 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
         <div className="footer-contact">
-          <div className="content">
-            <div className="main-contact">
-              <div className="left-contact">
+          <div className="content section footer-item-contact">
+          <div className="left-contact">
                 <div className="name-company">
                   Công ty Cổ phần Công nghệ Sen Đỏ, thành viên của Tập đoàn FPT
                 </div>
@@ -1631,12 +1627,11 @@ function App() {
                   <button>Đăng ký</button>
                 </form>
               </div>
-            </div>
           </div>
-          <div className="footer-top-search">
-            <div className="content">
-              <div className="main-search-footer">
-                <div className="search-title">
+        </div>
+        <div className="footer-top-search">
+          <div className="content section footer-item-search">
+            <div className="search-title">
                   <span>TOP TÌM KIẾM</span>
                   <svg
                     width="12"
@@ -1648,7 +1643,7 @@ function App() {
                     class="d7ed-SwZDZ2"
                   >
                     <path
-                      fill="#6F787E"
+                      fill="#0f1e29"
                       fill-rule="nonzero"
                       d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
                     ></path>
@@ -1669,15 +1664,8 @@ function App() {
                   <span>Đồ chơi nấu ăn</span>
                   <span>Laptop</span>
                   <span>iPhone 6</span>
-                  <span>Bàn phím cơ</span>
-                  <span>Quạt</span>
-                  <span>Đồng Hồ</span>
-                  <span>Tivi</span>
-                  <span>Laptop</span>
                   <span>Bàn phím</span>
                 </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
