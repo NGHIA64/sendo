@@ -455,6 +455,7 @@ input {
     width: 250.01px;
     position: sticky;
     top: 0rem;
+    overflow-x: hidden;
 }
 
 .right-body::-webkit-scrollbar {
@@ -913,11 +914,123 @@ body {
     text-align: center;
 }
 
-.footer-ads > div {
+.footer-ads>div {
     display: flex;
     justify-content: space-between;
     padding: 2.7rem 10.2rem;
 }
-.footer-ads-item{
+
+.footer-ads-item {
     max-width: 21rem;
 }
+
+.select-price {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.4rem;
+}
+
+.select-price>span {
+    align-items: center;
+    background-color: #f2f3f4;
+    cursor: pointer;
+    height: 3.2rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+    display: flex;
+    font-size: 14px;
+    line-height: 1.8rem;
+}
+
+.filter-gia {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    width: 100%;
+}
+
+.input-price-block {
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+}
+
+.input-price-block>div {
+    display: flex;
+    color: #6f787e;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.input-price-block>div>span {
+    margin-bottom: 0.8rem;
+    margin-top: auto;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.input-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-price>span {
+    margin-bottom: 0.8rem;
+}
+
+.input-price>input {
+    border: 1px solid #cfd2d4;
+    box-shadow: 0 0 0 1px transparent;
+    outline: 0;
+    font-size: 14px;
+    overflow: hidden;
+    transition: all .2s ease;
+    transition-property: background-color, color, border-color, box-shadow;
+    background-color: inherit;
+    border-radius: 4px;
+    padding: 0.8rem;
+    width: 100%;
+}
+button, input {
+    overflow: visible;
+}
+
+.input-price-block>button {
+    background-color: #f2f3f4;
+    border-color: #f2f3f4;
+    color: #b7bbbf;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8rem;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid #f2f3f4;
+    display: inline-block;
+    align-items: center;
+    font-size: 14px;
+}
+
+.filter-star{
+    margin-top: 0rem;
+}
+
+.filter-color{
+    grid-template-columns: 2.4rem 2.4rem 2.4rem 2.4rem;
+    display: grid;
+    grid-row-gap: 1.6rem;
+    grid-column-gap: 2.6rem;
+}
+.filter-color > button{
+    height: 2.4rem;
+    width: 2.4rem;
+    border: 1px solid #cfd2d4;
+    border-radius: 4px
+}
+
+
+
+
