@@ -455,6 +455,849 @@ function App() {
                 </div>
               </div>
               <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Khoảng giá</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter filter-gia">
+                  <div className="input-price-block">
+                    <div>
+                      <div className="input-price">
+                        <span>Thấp nhất</span>
+                        <input />
+                      </div>
+                      <span>{"-"}</span>
+                      <div className="input-price">
+                        <span>Cao nhất</span>
+                        <input />
+                      </div>
+                    </div>
+                    <button>Áp dụng</button>
+                  </div>
+                  <div className="select-price">
+                    <span>Dưới 200K</span>
+                    <span>200K - 250K</span>
+                    <span>250K - 550K</span>
+                    <span>550K - 1M</span>
+                  </div>
+                  <div className="footer-filter">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                      ></path>
+                    </svg>
+                    <span>Xem thêm</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Đánh giá</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter filter-gia filter-star">
+                  <div className="select-price">
+                    <span>5 sao</span>
+                    <span>{'4-5 sao'}</span>
+                    <span>{'3-5 sao'}</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Màu sắc</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter filter-color filter-gia">
+                  <button style={{backgroundColor: 'rgb(128, 64, 0)'}}></button>
+                  <button style={{backgroundColor: '#fff'}}></button>
+                  <button style={{backgroundColor: 'rgb(153, 153, 153)'}}></button>
+                  <button style={{backgroundColor: '#333'}}></button>
+                  <button style={{backgroundColor: 'rgb(0, 112, 0)'}}></button>
+                  <button style={{backgroundColor: 'rgb(255, 255, 0)'}}></button>
+                  <button style={{backgroundColor: 'rgb(17, 44, 78)'}}></button>
+                  <button style={{backgroundColor: 'rgb(0, 128, 255)'}}></button>
+                  <button style={{backgroundColor: 'rgb(255, 0, 0)'}}></button>
+                  <button style={{backgroundColor: 'rgb(255, 128, 64)'}}></button>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Loại đế</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Đế bệt</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Đế cao</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Đế bánh mì</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Đế độn</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Độ cao</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>{"<"} 5 cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Đế cao</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>từ 5 - dưới 7cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>từ 7 - 10 cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>{">"} 10 cm</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Chiều cao</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Dưới 3cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>3cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>5cm</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>4cm</span>
+                  </div>
+                </div>
+                <div className="footer-filter">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xlink="http://www.w3.org/1999/xlink"
+                    class="d7ed-SwZDZ2 d7ed-w34diS"
+                  >
+                    <path
+                      fill="#3f4b53"
+                      fill-rule="nonzero"
+                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                    ></path>
+                  </svg>
+                  <span>Xem thêm</span>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Chất liệu</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Vải</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Nhiều chất liệu</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Cao su</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Da bò</span>
+                  </div>
+                </div>
+                <div className="footer-filter">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xlink="http://www.w3.org/1999/xlink"
+                    class="d7ed-SwZDZ2 d7ed-w34diS"
+                  >
+                    <path
+                      fill="#3f4b53"
+                      fill-rule="nonzero"
+                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                    ></path>
+                  </svg>
+                  <span>Xem thêm</span>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Kích thước</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>35</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>37</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>38</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>42</span>
+                  </div>
+                </div>
+                <div className="footer-filter">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xlink="http://www.w3.org/1999/xlink"
+                    class="d7ed-SwZDZ2 d7ed-w34diS"
+                  >
+                    <path
+                      fill="#3f4b53"
+                      fill-rule="nonzero"
+                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                    ></path>
+                  </svg>
+                  <span>Xem thêm</span>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Xuất xứ</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Thái Lan</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Việt Nam</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Hàn Quốc</span>
+                  </div>
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Indonesia</span>
+                  </div>
+                </div>
+                <div className="footer-filter">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    version="1.1"
+                    xlink="http://www.w3.org/1999/xlink"
+                    class="d7ed-SwZDZ2 d7ed-w34diS"
+                  >
+                    <path
+                      fill="#3f4b53"
+                      fill-rule="nonzero"
+                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                    ></path>
+                  </svg>
+                  <span>Xem thêm</span>
+                </div>
+              </div>
+              <hr />
+              <div className="item-filter">
+                <div className="header-filter">
+                  <span>Bộ lọc khác</span>
+                  <button className="block">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-w34diS"
+                    >
+                      <path
+                        fill="#3f4b53"
+                        fill-rule="nonzero"
+                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div className="body-filter">
+                  <div className="body-filter-item">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-ong_OF"
+                    >
+                      <path
+                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                      ></path>
+                    </svg>
+                    <span>Có video</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
             </div>
             <div className="left-body">
               <div className="sort">
@@ -1507,7 +2350,7 @@ function App() {
       <div className="footer">
         <div className="footer-ads">
           <div className="content section">
-          <a className="footer-ads-item">
+            <a className="footer-ads-item">
               <img src="https://media3.scdn.vn/img4/2020/12_16/gJwXr6FFZKZCGKWaz4RB.png" />
               <div className="title-footer-ads">Siêu nhiều hàng tốt</div>
               <div className="detail-footer-ads">
@@ -1537,135 +2380,137 @@ function App() {
         </div>
         <div className="footer-about">
           <div className="content section footer-item-about">
-          <div className="about-item">
-                <div className="title-about">VỀ CHÚNG TÔI</div>
-                <div>
-                  <div className="detail-about">Giới thiệu Sendo.vn</div>
-                  <div className="detail-about">Giới thiệu SenMall</div>
-                  <div className="detail-about">Quy chế hoạt động</div>
-                  <div className="detail-about">Chính sách bảo mật</div>
-                  <div className="detail-about">Giao hàng và nhận hàng</div>
+            <div className="about-item">
+              <div className="title-about">VỀ CHÚNG TÔI</div>
+              <div>
+                <div className="detail-about">Giới thiệu Sendo.vn</div>
+                <div className="detail-about">Giới thiệu SenMall</div>
+                <div className="detail-about">Quy chế hoạt động</div>
+                <div className="detail-about">Chính sách bảo mật</div>
+                <div className="detail-about">Giao hàng và nhận hàng</div>
+              </div>
+            </div>
+            <div className="about-item">
+              <div className="title-about">DÀNH CHO NGƯỜI MUA</div>
+              <div>
+                <div className="detail-about">Giài quyết khiếu nại</div>
+                <div className="detail-about">Hướng dẫn mua hàng</div>
+                <div className="detail-about">Chính sách đổi trả</div>
+                <div className="detail-about">Chăm sóc khách hàng</div>
+                <div className="detail-about">Nạp tiền điện thoại</div>
+              </div>
+            </div>
+            <div className="about-item">
+              <div className="title-about">DÀNH CHO NGƯỜI BÁN</div>
+              <div>
+                <div className="detail-about">Quy định với người bán</div>
+                <div className="detail-about">Chính sách bán hàng</div>
+                <div className="detail-about">Hệ thống tiêu chí kiểm duyệt</div>
+                <div className="detail-about">Mở shop trên Sendo</div>
+              </div>
+            </div>
+            <div className="about-item">
+              <div className="title-about">TẢI ỨNG DỤNG SENDO</div>
+              <div>
+                <div className="detail-about">
+                  Mang thế giới mua sắm của Sendo trong tầm tay bạn
+                </div>
+                <div className="list-img-about">
+                  <img
+                    src="https://media3.scdn.vn/img4/2020/12_16/5lUTWdk3DXr8nlC9MDII.png"
+                    className="img-about"
+                  />
+                  <img
+                    src="https://media3.scdn.vn/img4/2021/10_26/0ZARLASzVrfL92924rzW.png"
+                    className="img-about"
+                  />
+                  <img
+                    src="https://media3.scdn.vn/img4/2021/03_19/AMV086JNpEbm4OGAvVng.png"
+                    className="img-about"
+                  />
                 </div>
               </div>
-              <div className="about-item">
-                <div className="title-about">DÀNH CHO NGƯỜI MUA</div>
-                <div>
-                  <div className="detail-about">Giài quyết khiếu nại</div>
-                  <div className="detail-about">Hướng dẫn mua hàng</div>
-                  <div className="detail-about">Chính sách đổi trả</div>
-                  <div className="detail-about">Chăm sóc khách hàng</div>
-                  <div className="detail-about">Nạp tiền điện thoại</div>
-                </div>
-              </div>
-              <div className="about-item">
-                <div className="title-about">DÀNH CHO NGƯỜI BÁN</div>
-                <div>
-                  <div className="detail-about">Quy định với người bán</div>
-                  <div className="detail-about">Chính sách bán hàng</div>
-                  <div className="detail-about">Hệ thống tiêu chí kiểm duyệt</div>
-                  <div className="detail-about">Mở shop trên Sendo</div>
-                </div>
-              </div>
-              <div className="about-item">
-                <div className="title-about">TẢI ỨNG DỤNG SENDO</div>
-                <div>
-                  <div className="detail-about">Mang thế giới mua sắm của Sendo trong tầm tay bạn</div>
-                  <div className="list-img-about">
-                    <img
-                      src="https://media3.scdn.vn/img4/2020/12_16/5lUTWdk3DXr8nlC9MDII.png"
-                      className="img-about"
-                    />
-                    <img
-                      src="https://media3.scdn.vn/img4/2021/10_26/0ZARLASzVrfL92924rzW.png"
-                      className="img-about"
-                    />
-                    <img
-                      src="https://media3.scdn.vn/img4/2021/03_19/AMV086JNpEbm4OGAvVng.png"
-                      className="img-about"
-                    />
-                  </div>
-                </div>
-              </div>
+            </div>
           </div>
         </div>
         <div className="footer-contact">
           <div className="content section footer-item-contact">
-          <div className="left-contact">
-                <div className="name-company">
-                  Công ty Cổ phần Công nghệ Sen Đỏ, thành viên của Tập đoàn FPT
-                </div>
-                <div className="detail-company">
-                  Số ĐKKD: 0312776486 - Ngày cấp: 13/05/2014, được sửa đổi lần
-                  thứ 20, ngày 26/04/2022.
-                </div>
-                <div className="detail-company">
-                  Cơ quan cấp: Sở Kế hoạch và Đầu tư TPHCM.
-                </div>
-                <div className="detail-company">
-                  Địa chỉ: Tầng 5, Tòa nhà A, Vườn Ươm Doanh Nghiệp, Lô D.01,
-                  Đường Tân Thuận, Khu chế xuất Tân Thuận, Phường Tân Thuận
-                  Đông, Quận 7, Thành phố Hồ Chí Minh, Việt Nam.
-                </div>
-                <div className="detail-company">Email: lienhe@sendo.vn</div>
-                <div className="detail-company">
-                  <div className="policy">
-                    <img src="https://media3.scdn.vn/img4/2020/12_16/XhpGDnvWqrlKeHLst3aS.png" />
-                    <img src="https://media3.scdn.vn/img4/2020/12_16/h6lEMGIAt4Uapd0Mls34.png" />
-                  </div>
+            <div className="left-contact">
+              <div className="name-company">
+                Công ty Cổ phần Công nghệ Sen Đỏ, thành viên của Tập đoàn FPT
+              </div>
+              <div className="detail-company">
+                Số ĐKKD: 0312776486 - Ngày cấp: 13/05/2014, được sửa đổi lần thứ
+                20, ngày 26/04/2022.
+              </div>
+              <div className="detail-company">
+                Cơ quan cấp: Sở Kế hoạch và Đầu tư TPHCM.
+              </div>
+              <div className="detail-company">
+                Địa chỉ: Tầng 5, Tòa nhà A, Vườn Ươm Doanh Nghiệp, Lô D.01,
+                Đường Tân Thuận, Khu chế xuất Tân Thuận, Phường Tân Thuận Đông,
+                Quận 7, Thành phố Hồ Chí Minh, Việt Nam.
+              </div>
+              <div className="detail-company">Email: lienhe@sendo.vn</div>
+              <div className="detail-company">
+                <div className="policy">
+                  <img src="https://media3.scdn.vn/img4/2020/12_16/XhpGDnvWqrlKeHLst3aS.png" />
+                  <img src="https://media3.scdn.vn/img4/2020/12_16/h6lEMGIAt4Uapd0Mls34.png" />
                 </div>
               </div>
-              <div className="right-contact">
-                <div className="title-contact">
-                  Đăng ký nhận bản tin ưu đãi khủng từ Sendo
-                </div>
-                <form className="form-contact">
-                  <input
-                    placeholder="Email của bạn là"
-                    type="text"
-                    inputMode="email"
-                  />
-                  <button>Đăng ký</button>
-                </form>
+            </div>
+            <div className="right-contact">
+              <div className="title-contact">
+                Đăng ký nhận bản tin ưu đãi khủng từ Sendo
               </div>
+              <form className="form-contact">
+                <input
+                  placeholder="Email của bạn là"
+                  type="text"
+                  inputMode="email"
+                />
+                <button>Đăng ký</button>
+              </form>
+            </div>
           </div>
         </div>
         <div className="footer-top-search">
           <div className="content section footer-item-search">
             <div className="search-title">
-                  <span>TOP TÌM KIẾM</span>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2"
-                  >
-                    <path
-                      fill="#0f1e29"
-                      fill-rule="nonzero"
-                      d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="key-word">
-                  <span>Đồng Hồ</span>
-                  <span>SHOPPING Mall</span>
-                  <span>Thế Giới Di Động</span>
-                  <span>Bánh Trung Thu Kinh Đô</span>
-                  <span>Black Friday</span>
-                  <span>Tivi</span>
-                  <span>Mỹ phẩm hàn quốc</span>
-                  <span>Kem chống nắng</span>
-                  <span>Chợ Tốt</span>
-                  <span>Shopee</span>
-                  <span>Corona Virus</span>
-                  <span>Đồ chơi nấu ăn</span>
-                  <span>Laptop</span>
-                  <span>iPhone 6</span>
-                  <span>Bàn phím</span>
-                </div>
+              <span>TOP TÌM KIẾM</span>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xlink="http://www.w3.org/1999/xlink"
+                class="d7ed-SwZDZ2"
+              >
+                <path
+                  fill="#0f1e29"
+                  fill-rule="nonzero"
+                  d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
+                ></path>
+              </svg>
+            </div>
+            <div className="key-word">
+              <span>Đồng Hồ</span>
+              <span>SHOPPING Mall</span>
+              <span>Thế Giới Di Động</span>
+              <span>Bánh Trung Thu Kinh Đô</span>
+              <span>Black Friday</span>
+              <span>Tivi</span>
+              <span>Mỹ phẩm hàn quốc</span>
+              <span>Kem chống nắng</span>
+              <span>Chợ Tốt</span>
+              <span>Shopee</span>
+              <span>Corona Virus</span>
+              <span>Đồ chơi nấu ăn</span>
+              <span>Laptop</span>
+              <span>iPhone 6</span>
+              <span>Bàn phím</span>
+            </div>
           </div>
         </div>
       </div>
