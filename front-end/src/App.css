@@ -636,6 +636,10 @@ hr {
     margin-bottom: 0.4rem;
     font-size: 14px;
     color: #0f1e29;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    height: 3.6rem;
 }
 
 .sale {
