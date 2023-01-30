@@ -1270,7 +1270,7 @@ class Body extends Component {
                   </svg>
                 </div>
               </div>
-              <div className="ads-product">
+              {/* <div className="ads-product">
                 <span>Sản phẩm được tài trợ</span>
                 <div>
                   <a className="product-item">
@@ -1484,7 +1484,7 @@ class Body extends Component {
                     </div>
                   </a>
                 </div>
-              </div>
+              </div> */}
               <AllProduct/>
               <div className="footer-sidebar">
                 <button className="btn-xem-them-product">Xem thêm</button>

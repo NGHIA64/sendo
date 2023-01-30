@@ -607,6 +607,7 @@ hr {
     margin-right: 1.6rem;
     position: relative;
     background-color: #fff;
+    width: 100%;
 }
 
 .product-item>img {
@@ -625,7 +626,12 @@ hr {
     top: 0;
     transform: translate(-8px, -50%);
 }
-
+.name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    height: 3.6rem;
+}
 .name>img {
     height: 12px;
     margin-right: 0.4rem;
@@ -636,10 +642,7 @@ hr {
     margin-bottom: 0.4rem;
     font-size: 14px;
     color: #0f1e29;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    height: 3.6rem;
+    
 }
 
 .sale {
