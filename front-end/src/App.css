@@ -608,6 +608,10 @@ hr {
     position: relative;
     background-color: #fff;
     width: 100%;
+    cursor: pointer;
+}
+.product-item:hover{
+    box-shadow: 0 7px 14px 0 rgb(0 0 0 / 12%), 0 5px 5px 0 rgb(0 0 0 / 4%);
 }
 
 .product-item>img {
