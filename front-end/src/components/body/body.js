@@ -1,8 +1,42 @@
 import React, { Component } from 'react';
 import btnScrollToTop from "../../img/btn-scroll-to-top.svg";
-import AllProduct from './allProduct';
+import { data } from "./data";
 class Body extends Component {
+  numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+  checkPercent(x) {
+    if (x) {
+      return `-${x}%`;
+    } else {
+      return;
+    }
+  }
+  checkPrice(x) {
+    if (x) {
+      return `${this.numberWithCommas(x)}đ`;
+    } else {
+      return;
+    }
+  }
+  state = {
+    name: "",
+  };
+  props = {
+    test: ''
+  }
+  changeSate(event) {
+    // console.log(event.target.value);
+    this.setState({
+      name: this.props,
+    });
+  }
     render() {
+      var filter;
+    // console.log(this.props);
+    console.log(this.props.test);
+    filter = data.allProduct.filter(notification => notification.name.includes(this.props.test));
+    console.log(filter)
         return (
             <div className="body">
         <div className="content">
@@ -1270,28 +1304,35 @@ class Body extends Component {
                   </svg>
                 </div>
               </div>
-              {/* <div className="ads-product">
-                <span>Sản phẩm được tài trợ</span>
-                <div>
+              <div className="ads-product">
+          <span>Sản phẩm được tài trợ</span>
+          <div>
+            {data.adsProduct.map((item, index) => {
+              return (
+                <>
                   <a className="product-item">
-                    <img src="https://media3.scdn.vn/img4/2020/05_08/aiYrDbNiFownCTqcSBgq_simg_de2fe0_250x250_maxb.jpg" />
+                    <img src={item.image} />
                     <div className="info-product">
                       <div className="branch">
                         <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
                       </div>
                       <div className="name">
                         <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
+                        <span>{item.name}</span>
                       </div>
                       <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
+                        <span>{`${this.numberWithCommas(
+                        item.default_price_min
+                      )}đ`}</span>
+                        <div>{this.checkPercent(item.sale_percent)}</div>
                       </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
+                      <div className="price">{`${this.numberWithCommas(
+                      item.sale_price_max
+                    )}đ`}</div>
+                      <div className="sold">Đã bán {item.sold}</div>
                       <div className="quality">
                         <div>
-                          <span>4.6/5</span>
+                          <span>{item.rated.star}/5</span>
                           <svg
                             width="12"
                             height="12"
@@ -1304,188 +1345,68 @@ class Body extends Component {
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                           </svg>
                         </div>
-                        <div className="adress">TP.HCM</div>
+                        <div className="adress">{item.shop.ware_house_region_name}</div>
                       </div>
                     </div>
                   </a>
-                  <a className="product-item">
-                    <img src="https://media3.scdn.vn/img4/2020/07_26/7ZSuo1R35kwN4WxYnzND_simg_de2fe0_250x250_maxb.jpg" />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
+                </>
+              );
+            })}
+          </div>
+        </div>
+        <div className="all-product">
+          {filter.map((item, index) => {
+            return (
+              <>
+                <a className="product-item">
+                  <img src={item.image} />
+                  <div className="info-product">
+                    <div className="branch">
+                      <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
+                    </div>
+                    <div className="name">
+                      <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
+                      <span>{item.name}</span>
+                    </div>
+                    <div className="sale">
+                      <span>{`${this.numberWithCommas(
+                        item.default_price_min
+                      )}đ`}</span>
+                      <div>{this.checkPercent(item.sale_percent)}</div>
+                    </div>
+                    <div className="price">{`${this.numberWithCommas(
+                      item.sale_price_max
+                    )}đ`}</div>
+                    <div className="tra-gop">
+                      <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                      Trả góp Kredivo
+                    </div>
+                    <div className="sold">Đã bán {item.sold}</div>
+                    <div className="quality">
+                      <div>
+                        <span>{item.rated.star}/5</span>
+                        <svg
+                          width="12"
+                          height="12"
+                          aria-hidden="true"
+                          fill="#ffc600"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <title>First star</title>
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
                       </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
-                      </div>
-                      <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
-                      </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
-                      <div className="quality">
-                        <div>
-                          <span>4.6/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
-                        </div>
-                        <div className="adress">TP.HCM</div>
+                      <div className="adress">
+                        {item.shop.ware_house_region_name}
                       </div>
                     </div>
-                  </a>
-                  <a className="product-item">
-                    <img src="https://media3.scdn.vn/img4/2022/06_09/yg9JxBY4MHB5UQw2nGeb_simg_de2fe0_250x250_maxb.jpg" />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                      </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
-                      </div>
-                      <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
-                      </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
-                      <div className="quality">
-                        <div>
-                          <span>4.6/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
-                        </div>
-                        <div className="adress">TP.HCM</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="product-item">
-                    <img src="https://media3.scdn.vn/img2/2018/7_3/K3fPdi_simg_de2fe0_250x250_maxb.jpg" />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                      </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
-                      </div>
-                      <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
-                      </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
-                      <div className="quality">
-                        <div>
-                          <span>4.6/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
-                        </div>
-                        <div className="adress">TP.HCM</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="product-item">
-                    <img src="https://media3.scdn.vn/img3/2019/5_18/RQpHK2_simg_de2fe0_250x250_maxb.jpg" />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                      </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
-                      </div>
-                      <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
-                      </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
-                      <div className="quality">
-                        <div>
-                          <span>4.6/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
-                        </div>
-                        <div className="adress">TP.HCM</div>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="product-item">
-                    <img src="https://media3.scdn.vn/img4/2020/01_05/AkD0atvmuni9xt0UDGuI_simg_de2fe0_250x250_maxb.jpg" />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                      </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>Giày nam họa tiết nổi bật</span>
-                      </div>
-                      <div className="sale">
-                        <span>150.000đ</span>
-                        <div>-48%</div>
-                      </div>
-                      <div className="price">79.000đ</div>
-                      <div className="sold">Đã bán 331</div>
-                      <div className="quality">
-                        <div>
-                          <span>4.6/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
-                        </div>
-                        <div className="adress">TP.HCM</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div> */}
-              <AllProduct/>
+                  </div>
+                </a>
+              </>
+            );
+          })}
+        </div>
               <div className="footer-sidebar">
                 <button className="btn-xem-them-product">Xem thêm</button>
               </div>

@@ -323,6 +323,7 @@ html {
 .btn-search {
     padding: 0.7rem;
     border: 1px solid #fff;
+    cursor: pointer;
 }
 
 .sign-in {}

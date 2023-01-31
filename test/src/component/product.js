@@ -24,7 +24,8 @@ class Product extends Component {
       <div className="product">
         {filter.map( (item, index) => {
             return <>
-            <div>item</div></>
+            <div>{item}</div>
+            </>
         })}
       </div>
     );

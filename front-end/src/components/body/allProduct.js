@@ -18,8 +18,24 @@ class AllProduct extends Component {
       return;
     }
   }
+  state = {
+    name: "",
+  };
+  props = {
+    test: ''
+  }
+  changeSate(event) {
+    // console.log(event.target.value);
+    this.setState({
+      name: this.props,
+    });
+  }
   render() {
-    console.log(data);
+    var filter;
+    // console.log(this.props);
+    console.log(this.props.test);
+    filter = data.allProduct.filter(item => item.name.includes(this.props.test));
+    console.log(filter)
     return (
       <>
         <div className="ads-product">

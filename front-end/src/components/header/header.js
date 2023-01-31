@@ -1,12 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import logo from "../../img/logo.svg";
 import menu from "../../img/menu.svg";
 import cart from "../../img/cart.svg";
+import Body from "../body/body";
 class Header extends Component {
-  
-    render() {
-        return (
-            <div className="header">
+  state = {
+    input: "",
+  };
+  changeSate(value) {
+    // console.log(event.target.value);
+    this.setState({
+      input: value,
+    });
+  }
+  checkInput(event) {
+    event.preventDefault();
+    var form = document.getElementById("myForm");
+    var data = document.getElementById("input").value;
+    console.log(data);
+    this.changeSate(data);
+    form.reset();
+  }
+  render() {
+    return (
+      <>
+      <div className="header">
         <div className="top-header">
           <div className="content top-header-item section">
             <div>Tải ứng dụng</div>
@@ -19,13 +37,13 @@ class Header extends Component {
             <div className="logo">
               <img src={logo} />
             </div>
-            <div className="form-search section">
+            <div className="form-search section" >
               <div className="menu">
                 <img src={menu} />
               </div>
-              <form className="search-form">
-                <input className="input-search block" value="giày nam" />
-                <button className="btn-search block">
+              <form className="search-form" id="myForm">
+                <input className="input-search block" id="input" />
+                <button className="btn-search block" onClick={(event) => this.checkInput(event)}>
                   <svg
                     width="24"
                     height="24"
@@ -55,8 +73,9 @@ class Header extends Component {
           </div>
         </div>
       </div>
-        );
-    }
+      <Body test={this.state.input}/></>
+    );
+  }
 }
 
 export default Header;
