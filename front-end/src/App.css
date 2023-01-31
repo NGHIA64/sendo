@@ -497,7 +497,13 @@ input {
     align-items: center;
     display: flex;
     padding: 0.4rem 0.8rem 0.4rem 1.2rem;
+    cursor: pointer;
 }
+.body-filter-item:hover{
+    background-color: #f2f3f4;
+    font-weight: 700;
+}
+
 
 .body-filter-item>svg {}
 
@@ -520,6 +526,11 @@ input {
     padding: 0.6rem 0.7rem;
     border: 1px solid #fff;
     justify-content: center;
+    cursor: pointer;
+}
+
+.footer-filter:hover{
+    background-color: #f2f3f4;
 }
 
 .footer-filter>span {
@@ -571,6 +582,7 @@ hr {
     width: 100%;
     flex-basis: 16.6666666667%;
     flex-grow: 0;
+    cursor: pointer;
 }
 
 .ads-product {
@@ -956,6 +968,11 @@ body {
     line-height: 1.8rem;
 }
 
+.select-price>span:hover{
+    background-color: #e7e8ea;
+    font-weight: 700;
+}
+
 .filter-gia {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
@@ -1024,8 +1041,14 @@ button, input {
     display: inline-block;
     align-items: center;
     font-size: 14px;
+    cursor: pointer;
 }
 
+.input-price-block>button:hover{
+    background-color: #f1514f;
+    border-color: #f1514f;
+    color: #fff;
+}
 .filter-star{
     margin-top: 0rem;
 }

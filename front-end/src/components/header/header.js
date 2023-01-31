@@ -3,6 +3,7 @@ import logo from "../../img/logo.svg";
 import menu from "../../img/menu.svg";
 import cart from "../../img/cart.svg";
 class Header extends Component {
+  
     render() {
         return (
             <div className="header">
