@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import btnScrollToTop from "../../img/btn-scroll-to-top.svg";
 import { data } from "./data";
+import AdsProduct from "./adsProduct";
+import UnChecked from "../../comon/component/UnChecked";
+import Checked from "../../comon/component/Checked";
 class Body extends Component {
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -21,38 +24,63 @@ class Body extends Component {
   }
   state = {
     name: "",
-    input: ''
+    conditionFilter: [],
   };
   props = {
-    test: ''
-  }
+    test: "",
+  };
   changeSate(event) {
     // console.log(event.target.value);
     this.setState({
       name: this.props,
     });
   }
-  setSelectValueInput(value) {
-    // console.log(event.target.value);
-    this.setState({
-      input: value,
-    });
-  }
+
   checkInput(event) {
     event.preventDefault();
-    var form = document.getElementById("myForm");
     var data = document.getElementById("input").value;
     console.log(data);
     this.changeSate(data);
   }
-    render() {
-      var filter;
+  isInArray(value, array) {
+    return array.indexOf(value) > -1;
+  }
+  removeElement(array, elem) {
+    var index = array.indexOf(elem);
+    if (index > -1) {
+      array.splice(index, 1);
+    }
+  }
+  selectFilter(event, value) {
+    var itemFilter = event.target;
+    let pushArr = this.state.conditionFilter;
+    if (this.isInArray(value, pushArr)) {
+      this.removeElement(pushArr, value);
+    } else {
+      pushArr.push(value);
+    }
+    this.setState({
+      conditionFilter: pushArr,
+    });
+    console.log(this.state.conditionFilter);
+    console.log(event);
+  }
+  render() {
+    var filter;
     // console.log(this.props);
     console.log(this.props.test);
-    filter = data.allProduct.filter(notification => notification.name.includes(this.props.test));
-    console.log(filter)
-        return (
-            <div className="body">
+    filter = data.allProduct.filter((notification) =>
+      notification.name.includes(this.props.test)
+    );
+    if (this.state.conditionFilter.length != 0) {
+      filter = data.allProduct.filter((item) =>
+        this.state.conditionFilter.includes(item.shop.ware_house_region_name)
+      );
+      document.getElementById("ads-product").style.display = "none";
+    }
+    console.log(this.conditionFilter);
+    return (
+      <div className="body">
         <div className="content">
           <div className="top-body">
             <div className="top-body-title">
@@ -86,76 +114,32 @@ class Body extends Component {
                   </button>
                 </div>
                 <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Hà Nội")}
+                  >
+                    {this.state.conditionFilter?.includes("Hà Nội")?<Checked/>:<UnChecked/>} 
                     <span>Hà Nội</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Hồ Chí Minh")}
+                  >
+                    {this.state.conditionFilter?.includes("Hồ Chí Minh")?<Checked/>:<UnChecked/>} 
                     <span>Hồ Chí Minh</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Lâm Đồng")}
+                  >
+                     {this.state.conditionFilter?.includes("Lâm Đồng")?<Checked/>:<UnChecked/>} 
                     <span>Lâm Đồng</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Đà Nẵng")}
+                  >
+                     {this.state.conditionFilter?.includes("Đà Nẵng")?<Checked/>:<UnChecked/>} 
                     <span>Đà Nẵng</span>
                   </div>
                 </div>
@@ -539,8 +523,8 @@ class Body extends Component {
                 <div className="body-filter filter-gia filter-star">
                   <div className="select-price">
                     <span>5 sao</span>
-                    <span>{'4-5 sao'}</span>
-                    <span>{'3-5 sao'}</span>
+                    <span>{"4-5 sao"}</span>
+                    <span>{"3-5 sao"}</span>
                   </div>
                 </div>
               </div>
@@ -567,16 +551,32 @@ class Body extends Component {
                   </button>
                 </div>
                 <div className="body-filter filter-color filter-gia">
-                  <button style={{backgroundColor: 'rgb(128, 64, 0)'}}></button>
-                  <button style={{backgroundColor: '#fff'}}></button>
-                  <button style={{backgroundColor: 'rgb(153, 153, 153)'}}></button>
-                  <button style={{backgroundColor: '#333'}}></button>
-                  <button style={{backgroundColor: 'rgb(0, 112, 0)'}}></button>
-                  <button style={{backgroundColor: 'rgb(255, 255, 0)'}}></button>
-                  <button style={{backgroundColor: 'rgb(17, 44, 78)'}}></button>
-                  <button style={{backgroundColor: 'rgb(0, 128, 255)'}}></button>
-                  <button style={{backgroundColor: 'rgb(255, 0, 0)'}}></button>
-                  <button style={{backgroundColor: 'rgb(255, 128, 64)'}}></button>
+                  <button
+                    style={{ backgroundColor: "rgb(128, 64, 0)" }}
+                  ></button>
+                  <button style={{ backgroundColor: "#fff" }}></button>
+                  <button
+                    style={{ backgroundColor: "rgb(153, 153, 153)" }}
+                  ></button>
+                  <button style={{ backgroundColor: "#333" }}></button>
+                  <button
+                    style={{ backgroundColor: "rgb(0, 112, 0)" }}
+                  ></button>
+                  <button
+                    style={{ backgroundColor: "rgb(255, 255, 0)" }}
+                  ></button>
+                  <button
+                    style={{ backgroundColor: "rgb(17, 44, 78)" }}
+                  ></button>
+                  <button
+                    style={{ backgroundColor: "rgb(0, 128, 255)" }}
+                  ></button>
+                  <button
+                    style={{ backgroundColor: "rgb(255, 0, 0)" }}
+                  ></button>
+                  <button
+                    style={{ backgroundColor: "rgb(255, 128, 64)" }}
+                  ></button>
                 </div>
               </div>
               <hr />
@@ -1318,109 +1318,60 @@ class Body extends Component {
                   </svg>
                 </div>
               </div>
-              <div className="ads-product">
-          <span>Sản phẩm được tài trợ</span>
-          <div>
-            {data.adsProduct.map((item, index) => {
-              return (
-                <>
-                  <a className="product-item">
-                    <img src={item.image} />
-                    <div className="info-product">
-                      <div className="branch">
-                        <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                      </div>
-                      <div className="name">
-                        <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                        <span>{item.name}</span>
-                      </div>
-                      <div className="sale">
-                        <span>{`${this.numberWithCommas(
-                        item.default_price_min
-                      )}đ`}</span>
-                        <div>{this.checkPercent(item.sale_percent)}</div>
-                      </div>
-                      <div className="price">{`${this.numberWithCommas(
-                      item.sale_price_max
-                    )}đ`}</div>
-                      <div className="sold">Đã bán {item.sold}</div>
-                      <div className="quality">
-                        <div>
-                          <span>{item.rated.star}/5</span>
-                          <svg
-                            width="12"
-                            height="12"
-                            aria-hidden="true"
-                            fill="#ffc600"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <title>First star</title>
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                          </svg>
+              <AdsProduct />
+              <div className="all-product">
+                {filter.map((item, index) => {
+                  return (
+                    <>
+                      <a className="product-item">
+                        <img src={item.image} />
+                        <div className="info-product">
+                          <div className="branch">
+                            <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
+                          </div>
+                          <div className="name">
+                            <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
+                            <span>{item.name}</span>
+                          </div>
+                          <div className="sale">
+                            <span>{`${this.numberWithCommas(
+                              item.default_price_min
+                            )}đ`}</span>
+                            <div>{this.checkPercent(item.sale_percent)}</div>
+                          </div>
+                          <div className="price">{`${this.numberWithCommas(
+                            item.sale_price_max
+                          )}đ`}</div>
+                          <div className="tra-gop">
+                            <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
+                            Trả góp Kredivo
+                          </div>
+                          <div className="sold">Đã bán {item.sold}</div>
+                          <div className="quality">
+                            <div>
+                              <span>{item.rated.star}/5</span>
+                              <svg
+                                width="12"
+                                height="12"
+                                aria-hidden="true"
+                                fill="#ffc600"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <title>First star</title>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                              </svg>
+                            </div>
+                            <div className="adress">
+                              {item.shop.ware_house_region_name}
+                            </div>
+                          </div>
                         </div>
-                        <div className="adress">{item.shop.ware_house_region_name}</div>
-                      </div>
-                    </div>
-                  </a>
-                </>
-              );
-            })}
-          </div>
-        </div>
-        <div className="all-product">
-          {filter.map((item, index) => {
-            return (
-              <>
-                <a className="product-item">
-                  <img src={item.image} />
-                  <div className="info-product">
-                    <div className="branch">
-                      <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
-                    </div>
-                    <div className="name">
-                      <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                      <span>{item.name}</span>
-                    </div>
-                    <div className="sale">
-                      <span>{`${this.numberWithCommas(
-                        item.default_price_min
-                      )}đ`}</span>
-                      <div>{this.checkPercent(item.sale_percent)}</div>
-                    </div>
-                    <div className="price">{`${this.numberWithCommas(
-                      item.sale_price_max
-                    )}đ`}</div>
-                    <div className="tra-gop">
-                      <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
-                      Trả góp Kredivo
-                    </div>
-                    <div className="sold">Đã bán {item.sold}</div>
-                    <div className="quality">
-                      <div>
-                        <span>{item.rated.star}/5</span>
-                        <svg
-                          width="12"
-                          height="12"
-                          aria-hidden="true"
-                          fill="#ffc600"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <title>First star</title>
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                        </svg>
-                      </div>
-                      <div className="adress">
-                        {item.shop.ware_house_region_name}
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </>
-            );
-          })}
-        </div>
+                      </a>
+                    </>
+                  );
+                })}
+              </div>
               <div className="footer-sidebar">
                 <button className="btn-xem-them-product">Xem thêm</button>
               </div>
@@ -1450,8 +1401,8 @@ class Body extends Component {
           <span>Chat</span>
         </div>
       </div>
-        );
-    }
+    );
+  }
 }
 
 export default Body;

@@ -272,6 +272,7 @@ html {
     font-size: 12px;
     line-height: 1.6rem !important;
     margin-right: 2.4rem;
+    cursor: pointer;
 }
 
 .bottom-header {
@@ -286,6 +287,7 @@ html {
 .logo {
     width: auto;
     margin-right: 22px;
+    cursor: pointer;
 }
 
 .logo>img {
@@ -297,6 +299,7 @@ html {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
     margin-right: 0.8rem;
+    cursor: pointer;
 }
 
 .form-search {
@@ -331,6 +334,7 @@ html {
 .cart {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
+    cursor: pointer;
 }
 
 .btn-sign-in>button {
@@ -341,10 +345,12 @@ html {
     width: 101.2px;
     font-size: 14px;
     height: 32.05px;
+    cursor: pointer;
 }
 
 .btn-sign-in {
     width: 103px;
+    cursor: pointer;
 }
 
 img,
@@ -488,6 +494,7 @@ input {
 .header-filter>button {
     padding: 0.7rem;
     border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .body-filter {
@@ -758,6 +765,7 @@ hr {
     color: #3f4b53;
     border-radius: 4px;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .footer-sidebar {

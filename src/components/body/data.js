@@ -25,7 +25,7 @@ export const data = {
                 "status": 2,
                 "level": 4,
                 "type": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_level": "https://media3.scdn.vn/img4/2020/08_11/d0DISnbiFa7jRW20whKD.png",
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png",
@@ -73,7 +73,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -131,7 +131,7 @@ export const data = {
                 "name": "QUEEN_ BEAUTY_ SHOP",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -187,7 +187,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -245,7 +245,7 @@ export const data = {
                 "is_certified": true,
                 "status": 2,
                 "level": 3,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_level": "https://media3.scdn.vn/img4/2020/08_11/6UJO86aQpTH2jUlRCEQ3.png",
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
@@ -298,7 +298,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -356,7 +356,7 @@ export const data = {
                 "name": "THẾ GIỚI HÀNG HOÁ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -412,7 +412,7 @@ export const data = {
                 "name": "THẾ GIỚI HÀNG HOÁ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -468,7 +468,7 @@ export const data = {
                 "name": "QUEEN_ BEAUTY_ SHOP",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -522,7 +522,7 @@ export const data = {
                 "name": "TDM Fashion Store",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {}
             },
             "rated": {
@@ -621,7 +621,7 @@ export const data = {
                 "name": "Cadu Store",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -673,7 +673,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -729,7 +729,7 @@ export const data = {
                 "name": "Genuine store",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -781,7 +781,7 @@ export const data = {
                 "name": "THẾ GIỚI HÀNG HOÁ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -839,7 +839,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -897,7 +897,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -955,7 +955,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Lâm Đồng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1010,7 +1010,7 @@ export const data = {
                 "name": "AGAT",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1063,7 +1063,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1117,7 +1117,7 @@ export const data = {
                 "id": 367150,
                 "name": "AROTI VIET NAM",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {}
             },
             "rated": {
@@ -1167,7 +1167,7 @@ export const data = {
                 "name": "Giày Bảo Hân",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {}
             },
             "rated": {
@@ -1210,7 +1210,7 @@ export const data = {
                 "name": "Giày Nam Giá Rẻ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1314,7 +1314,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1371,7 +1371,7 @@ export const data = {
                 "name": "Giày Bảo Hân",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {}
             },
             "rated": {
@@ -1467,7 +1467,7 @@ export const data = {
                 "name": "TDM Fashion Store",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {}
             },
             "rated": {
@@ -1507,7 +1507,7 @@ export const data = {
                 "id": 322336,
                 "name": "AROTI",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1550,7 +1550,7 @@ export const data = {
                 "name": "AGAT",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1603,7 +1603,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Đà Nẵng",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1661,7 +1661,7 @@ export const data = {
                 "name": "Giày Nam Giá Rẻ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1710,7 +1710,7 @@ export const data = {
                 "name": "Genuine store",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1759,7 +1759,7 @@ export const data = {
                 "id": 367150,
                 "name": "AROTI VIET NAM",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {}
             },
             "rated": {
@@ -1806,7 +1806,7 @@ export const data = {
                 "id": 534395,
                 "name": "Giày dép thời trang giá rẻ",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {}
             },
             "rated": {
@@ -1857,7 +1857,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1912,7 +1912,7 @@ export const data = {
                 "id": 515460,
                 "name": "giay dep thuy dung",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {}
             },
             "rated": {
@@ -1945,7 +1945,7 @@ export const data = {
                 "name": "Giày Nam Giá Rẻ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -1994,7 +1994,7 @@ export const data = {
                 "id": 302467,
                 "name": "Ensado Pro",
                 "status": 2,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {}
             },
             "rated": {},
@@ -2091,7 +2091,7 @@ export const data = {
                 "name": "Giày Nam Giá Rẻ",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }
@@ -2188,7 +2188,7 @@ export const data = {
                 "name": "Xưởng Giày Da Anh Quang",
                 "status": 2,
                 "type": 1,
-                "ware_house_region_name": "Hà Nội",
+                "ware_house_region_name": "Hồ Chí Minh",
                 "badge_urls": {
                     "shop_plus": "https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png"
                 }

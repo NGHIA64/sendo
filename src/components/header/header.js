@@ -19,6 +19,7 @@ class Header extends Component {
     var data = document.getElementById("input").value;
     console.log(data);
     this.changeSate(data);
+    document.getElementById('ads-product').style.display ='none'
   }
   render() {
     return (
