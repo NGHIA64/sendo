@@ -21,6 +21,7 @@ class Body extends Component {
   }
   state = {
     name: "",
+    input: ''
   };
   props = {
     test: ''
@@ -30,6 +31,19 @@ class Body extends Component {
     this.setState({
       name: this.props,
     });
+  }
+  setSelectValueInput(value) {
+    // console.log(event.target.value);
+    this.setState({
+      input: value,
+    });
+  }
+  checkInput(event) {
+    event.preventDefault();
+    var form = document.getElementById("myForm");
+    var data = document.getElementById("input").value;
+    console.log(data);
+    this.changeSate(data);
   }
     render() {
       var filter;
