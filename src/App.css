@@ -229,7 +229,7 @@ html {
         padding-right: 2.4rem;
     }
     .btn-sign-in > button{
-        font-size: 13px !important;
+        font-size: 10px !important;
     }
 }
 
@@ -355,6 +355,7 @@ html {
     font-size: 14px;
     height: 32.05px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .btn-sign-in {
