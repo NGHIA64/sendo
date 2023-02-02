@@ -228,6 +228,9 @@ html {
         padding-left: 2.4rem;
         padding-right: 2.4rem;
     }
+    .btn-sign-in > button{
+        font-size: 13px !important;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 1023px) {
@@ -235,6 +238,9 @@ html {
         max-width: 768px;
         padding-left: 1.6rem;
         padding-right: 1.6rem;
+    }
+    .btn-sign-in > button{
+        font-size: 13px !important;
     }
 }
 
@@ -244,10 +250,13 @@ html {
         padding-left: 1.6rem;
         padding-right: 1.6rem;
     }
+    .btn-sign-in > button{
+        font-size: 13px !important;
+    }
 }
 
 .section {
-    align-items: center;
+    align-items: center ;
     display: flex;
     position: relative;
 }
