@@ -1,8 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { Products } = require("./models");
+var cors = require('cors')
 const app = express();
-
+app.use(cors)
 app.use(express.json());
 app.get("/products", async (req, res) => {
   const allProductss = await Products.find();
