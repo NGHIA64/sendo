@@ -81,7 +81,7 @@ class Header extends Component {
       <>
         <div className="header">
           <div className="top-header">
-            <div className="content top-header-item section">
+            <div className="content top-header-item section .not-black-out">
               <div id="down-app" onClick={(event) => this.showQR(event)}>
                 Tải ứng dụng
                 <div className="block qr" id="qr">
