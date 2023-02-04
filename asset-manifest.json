@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/sendo/static/css/main.4f8ce751.css",
-    "main.js": "/sendo/static/js/main.70e210b4.js",
+    "main.css": "/sendo/static/css/main.e52a7555.css",
+    "main.js": "/sendo/static/js/main.cae7d50b.js",
     "static/js/787.8f750fdc.chunk.js": "/sendo/static/js/787.8f750fdc.chunk.js",
     "static/media/logo.svg": "/sendo/static/media/logo.f2d24ffb0b78ef7ab5d08e8f18ce4f08.svg",
     "index.html": "/sendo/index.html",
     "static/media/menu.svg": "/sendo/static/media/menu.f4d52adc84ceb87b76675392f58ef623.svg",
     "static/media/cart.svg": "/sendo/static/media/cart.205c42b4c1d8adb22492c8938932311e.svg",
     "static/media/btn-scroll-to-top.svg": "/sendo/static/media/btn-scroll-to-top.b40b2d2a4041c61423f24a00d4c33587.svg",
-    "main.4f8ce751.css.map": "/sendo/static/css/main.4f8ce751.css.map",
-    "main.70e210b4.js.map": "/sendo/static/js/main.70e210b4.js.map",
+    "main.e52a7555.css.map": "/sendo/static/css/main.e52a7555.css.map",
+    "main.cae7d50b.js.map": "/sendo/static/js/main.cae7d50b.js.map",
     "787.8f750fdc.chunk.js.map": "/sendo/static/js/787.8f750fdc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f8ce751.css",
-    "static/js/main.70e210b4.js"
+    "static/css/main.e52a7555.css",
+    "static/js/main.cae7d50b.js"
   ]
 }
