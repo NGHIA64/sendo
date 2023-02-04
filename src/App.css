@@ -273,6 +273,87 @@ html {
     line-height: 1.6rem !important;
     margin-right: 2.4rem;
     cursor: pointer;
+    position: relative;
+}
+#customerCare>div{
+    position: absolute;
+    padding: 0.8rem;
+    color: #0f1e29;
+    display: none;
+    font-weight: 400;
+    top: 2.3rem;
+    z-index: 999;
+    align-items: center;
+    width: 177px;
+    height: 84px;
+    box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%);
+}
+#customerCare>div>div{
+    padding: 0.8rem;
+    font-size: 14px;
+    width: 100%;
+}
+#customerCare>div>div:hover{
+    font-weight: 700;
+    background-color: #f2f3f4;
+}
+.checkDonHang{
+    position: relative;
+}
+.checkDonHang > div{
+    display: none;
+    position: absolute;
+    top: 2.3rem;
+    z-index: 999;
+    box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%);
+}
+.checkDonHang > div::before{
+    position: absolute;
+    width: 100%;
+    height: 2.3rem;
+    content: "";
+    display: block;
+}
+.checkDonHang > div > form{
+    display: grid;
+    padding: 0.8rem;
+}
+.checkDonHang > div > form > input{
+    border: 1px solid #cfd2d4;
+    font-size: 14px!important;
+    line-height: 1.4rem;
+    padding: 0.8rem;
+    overflow: visible;
+    margin-bottom: 0.8rem;
+}
+.checkDonHang > div > form > button{
+    padding: 0.6rem 1.6rem;
+    background-color: #ee2624;
+    border: 1px solid #ee2624;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+.qr{
+    position: absolute;
+    height: 172px;
+    width: 146px;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    top: 2.3rem;
+    display: none;
+    font-size: 12px;
+    font-weight: 400;
+    color: #0f1e29;
+    padding: 0.8rem;
+    box-shadow: 0 -2px 8px 0 rgb(0 0 0 / 10%), 0 4px 8px 0 rgb(0 0 0 / 10%);
+}
+.qr > img{
+    margin-bottom: 0.8rem;
+    width: 130px;
+    height: 130px;
 }
 
 .bottom-header {
@@ -564,7 +645,7 @@ hr {
     align-items: center;
     display: flex;
     width: 100%;
-
+    height: 34px;
 }
 
 .sort>span {
@@ -573,27 +654,60 @@ hr {
     font-weight: 400;
     font-size: 14px;
 }
-
+.sort>div:hover{
+    border: 1px solid #007aff;
+}
 .sort>div {
-    display: flex;
-    background-color: #fff;
+    
+    position: relative;
+    display: block;
     border: 1px solid #cfd2d4;
     box-shadow: 0 0 0 1px transparent;
     align-items: center;
     font-size: 14px;
     color: #6f787e;
-    /* padding: 0.7rem ; */
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    justify-content: space-between;
     width: 100%;
     flex-basis: 16.6666666667%;
     flex-grow: 0;
     cursor: pointer;
 }
-
+.sort-default{
+    display: flex;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    justify-content: space-between;
+}
+.not-black-out{
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+           -khtml-user-select: none; /* Konqueror HTML */
+             -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+}
+.sort-select{
+    /* display: none; */
+    top: 125%;
+    display: none;
+    position: absolute;
+    padding: 0.8rem;
+    width: 100%;
+    z-index: 888;
+    box-shadow: 0 -4px 16px 0 rgb(0 0 0 / 10%), 0 8px 16px 0 rgb(0 0 0 / 10%);
+}
+.sort-select-item:hover{
+    background-color: #f2f3f4;
+}
+.sort-select-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1.2rem;
+    color: #3f4b53;
+}
 .ads-product {
     margin-top: 1.6rem;
     background-color: #fff;

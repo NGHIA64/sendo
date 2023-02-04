@@ -4,6 +4,8 @@ import { data } from "./data";
 import AdsProduct from "./adsProduct";
 import UnChecked from "../../comon/component/UnChecked";
 import Checked from "../../comon/component/Checked";
+import CheckSort from "../../comon/component/checkSort";
+import UnCheckSort from "../../comon/component/uncheckSort";
 class Body extends Component {
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -25,7 +27,25 @@ class Body extends Component {
   state = {
     name: "",
     conditionFilter: [],
+    sortSelect: false,
+    sortValue: ''
   };
+  showSortSelect(event) {
+    console.log('ok')
+    if (this.state.sortSelect == false) {
+      this.setState({
+        sortSelect: true,
+      });
+      document.getElementById("sort-select").style="display: block;"
+      document.querySelector('.sort>div').style = 'border-top: 0.5px solid #007aff;border-right: 2px solid #007aff;border-left: 2px solid #007aff;border-bottom: 2px solid #007aff;'
+    } else {
+      this.setState({
+        sortSelect: false,
+      });
+      document.getElementById("sort-select").style.display = "none";
+      document.querySelector('.sort>div').style = 'border: 1px solid #cfd2d4;'
+    }
+  }
   props = {
     test: "",
   };
@@ -65,10 +85,16 @@ class Body extends Component {
     console.log(this.state.conditionFilter);
     console.log(event);
   }
+  selectSort(value){
+    this.setState({
+      sortValue: value
+    })
+  }
   render() {
     var filter;
     // console.log(this.props);
     console.log(this.props.test);
+    console.log();
     filter = data.allProduct.filter((notification) =>
       notification.name.includes(this.props.test)
     );
@@ -76,6 +102,25 @@ class Body extends Component {
       filter = data.allProduct.filter((item) =>
         this.state.conditionFilter.includes(item.shop.ware_house_region_name)
       );
+      document.getElementById("ads-product").style.display = "none";
+    }
+    if(this.state.sortSelect==true){
+      switch(this.state.sortValue){
+        case 'Đề cử': 
+          break
+        case 'Bán chạy':
+          
+        break;
+        case 'Giá thấp':
+          filter.map( (item, index) => {})
+        break;
+        case 'Giá cao':
+
+        break;
+        case 'Lượt yêu thích':
+
+        break;
+      }
       document.getElementById("ads-product").style.display = "none";
     }
     console.log(this.conditionFilter);
@@ -118,28 +163,44 @@ class Body extends Component {
                     className="body-filter-item"
                     onClick={(event) => this.selectFilter(event, "Hà Nội")}
                   >
-                    {this.state.conditionFilter?.includes("Hà Nội")?<Checked/>:<UnChecked/>} 
+                    {this.state.conditionFilter?.includes("Hà Nội") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Hà Nội</span>
                   </div>
                   <div
                     className="body-filter-item"
                     onClick={(event) => this.selectFilter(event, "Hồ Chí Minh")}
                   >
-                    {this.state.conditionFilter?.includes("Hồ Chí Minh")?<Checked/>:<UnChecked/>} 
+                    {this.state.conditionFilter?.includes("Hồ Chí Minh") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Hồ Chí Minh</span>
                   </div>
                   <div
                     className="body-filter-item"
                     onClick={(event) => this.selectFilter(event, "Lâm Đồng")}
                   >
-                     {this.state.conditionFilter?.includes("Lâm Đồng")?<Checked/>:<UnChecked/>} 
+                    {this.state.conditionFilter?.includes("Lâm Đồng") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Lâm Đồng</span>
                   </div>
                   <div
                     className="body-filter-item"
                     onClick={(event) => this.selectFilter(event, "Đà Nẵng")}
                   >
-                     {this.state.conditionFilter?.includes("Đà Nẵng")?<Checked/>:<UnChecked/>} 
+                    {this.state.conditionFilter?.includes("Đà Nẵng") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Đà Nẵng</span>
                   </div>
                 </div>
@@ -1299,23 +1360,47 @@ class Body extends Component {
             <div className="left-body">
               <div className="sort">
                 <span>Sắp xếp theo:</span>
-                <div className="block">
-                  <div>Đề cử</div>
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-OBpTEp"
-                  >
-                    <path
-                      fill="#6F787E"
-                      fill-rule="nonzero"
-                      d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
-                    ></path>
-                  </svg>
+                <div className="block not-black-out">
+                  <div className="sort-default block" onClick={(event) => this.showSortSelect(event)}>
+                    <div>Đề cử</div>
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      version="1.1"
+                      xlink="http://www.w3.org/1999/xlink"
+                      class="d7ed-SwZDZ2 d7ed-OBpTEp"
+                    >
+                      <path
+                        fill="#6F787E"
+                        fill-rule="nonzero"
+                        d="M12 13.214 17.524 8 19 9.393 12 16 5 9.393 6.476 8z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="sort-select block" id="sort-select"  >
+                    <div className="sort-select-item">
+                      <span>Đề cử</span>
+                      <UnCheckSort />
+                    </div>
+                    <div className="sort-select-item">
+                      <span>Bán chạy</span>
+                      <UnCheckSort />
+                    </div>
+                    <div className="sort-select-item">
+                      <span>Giá thấp</span>
+                      <UnCheckSort />
+                    </div>
+                    <div className="sort-select-item">
+                      <span>Giá cao</span>
+                      <UnCheckSort />
+                    </div>
+                    <div className="sort-select-item">
+                      <span>Lượt yêu thích</span>
+                      <UnCheckSort />
+                    </div>
+                  </div>
                 </div>
               </div>
               <AdsProduct />
