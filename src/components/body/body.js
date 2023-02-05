@@ -139,9 +139,9 @@ class Body extends Component {
           filter.sort( (a, b) => parseFloat(b?.rated?.star) - parseFloat(a?.rated?.star))
           break;
       }
-      filter = test.filter((notification) =>
+    if(this.props.test!=''){  filter = test.filter((notification) =>
       notification.name.includes(this.props.test)
-    );
+    );}
     console.log(this.conditionFilter);
     return (
       <div className="body .not-black-out">
