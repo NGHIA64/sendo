@@ -105,9 +105,9 @@ class Body extends Component {
       console.log(err);
     }
   }
-  render() {
-    var filter;
+  render() {    
     const test = this.state.data.map((x) => x);
+    var filter = test
     console.log(test);
     if (this.state.conditionFilter.length != 0) {
       filter = test.filter((item) =>
@@ -127,13 +127,13 @@ class Body extends Component {
           }
           break;
         case "Bán chạy":
-          filter.sort( (a, b) => parseFloat(b.sold) - parseFloat(a.sold))
+          filter.sort( (a, b) => parseFloat(b?.sold) - parseFloat(a?.sold))
           break;
         case "Giá thấp":
-          filter.sort( (a, b) => parseFloat(a.sale_price_max) - parseFloat(b.sale_price_max))
+          filter.sort( (a, b) => parseFloat(a?.sale_price_max) - parseFloat(b?.sale_price_max))
           break;
         case "Giá cao":
-          filter.sort( (a, b) => parseFloat(b.sale_price_max) - parseFloat(a.sale_price_max))
+          filter.sort( (a, b) => parseFloat(b?.sale_price_max) - parseFloat(a?.sale_price_max))
           break;
         case "Lượt yêu thích":
           filter.sort( (a, b) => parseFloat(b?.rated?.star) - parseFloat(a?.rated?.star))
