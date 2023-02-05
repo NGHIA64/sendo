@@ -27,7 +27,7 @@ class Body extends Component {
     name: "",
     conditionFilter: [],
     sortSelect: false,
-    sortValue: "",
+    sortValue: "Đề cử",
     data: [],
     isLoaded: false,
   };
@@ -39,7 +39,7 @@ class Body extends Component {
       });
       document.getElementById("sort-select").style = "display: block;";
       document.querySelector(".sort>div").style =
-        "border-top: 0.5px solid #007aff;border-right: 2px solid #007aff;border-left: 2px solid #007aff;border-bottom: 2px solid #007aff;";
+        "box-shadow: 0 0 0 1px #3f81fe;border-color: #3f81fe;";
     } else {
       this.setState({
         sortSelect: false,
@@ -90,7 +90,11 @@ class Body extends Component {
   selectSort(value) {
     this.setState({
       sortValue: value,
+      sortSelect: false
     });
+    document.getElementById('sort-select').style.display='none'
+    document.querySelector(".sort>div").style = "border: 1px solid #cfd2d4;";
+    document.getElementById("ads-product").style.display = "none";
   }
   async componentDidMount() {
     try {
@@ -103,8 +107,6 @@ class Body extends Component {
   }
   render() {
     var filter;
-    // console.log(this.props);
-    console.log(this.props.test);
     const test = this.state.data.map((x) => x);
     console.log(test);
     filter = test.filter((notification) =>
@@ -116,22 +118,30 @@ class Body extends Component {
       );
       document.getElementById("ads-product").style.display = "none";
     }
-    if (this.state.sortSelect == true) {
       switch (this.state.sortValue) {
         case "Đề cử":
+          if (this.state.conditionFilter.length != 0) {
+            filter = test.filter((item) =>
+              this.state.conditionFilter.includes(item.shop.ware_house_region_name)
+            );
+            document.getElementById("ads-product").style.display = "none";
+          }else{
+            filter = test
+          }
           break;
         case "Bán chạy":
+          filter.sort( (a, b) => parseFloat(b.sold) - parseFloat(a.sold))
           break;
         case "Giá thấp":
-          filter.map((item, index) => {});
+          filter.sort( (a, b) => parseFloat(a.sale_price_max) - parseFloat(b.sale_price_max))
           break;
         case "Giá cao":
+          filter.sort( (a, b) => parseFloat(b.sale_price_max) - parseFloat(a.sale_price_max))
           break;
         case "Lượt yêu thích":
+          filter.sort( (a, b) => parseFloat(b?.rated?.star) - parseFloat(a?.rated?.star))
           break;
       }
-      document.getElementById("ads-product").style.display = "none";
-    }
     console.log(this.conditionFilter);
     return (
       <div className="body .not-black-out">
@@ -1374,7 +1384,7 @@ class Body extends Component {
                     className="sort-default block"
                     onClick={(event) => this.showSortSelect(event)}
                   >
-                    <div>Đề cử</div>
+                    <div>{this.state.sortValue}</div>
                     <svg
                       width="16"
                       height="16"
@@ -1392,23 +1402,23 @@ class Body extends Component {
                     </svg>
                   </div>
                   <div className="sort-select block" id="sort-select">
-                    <div className="sort-select-item">
+                    <div className="sort-select-item" onClick={()=> this.selectSort('Đề cử')}>
                       <span>Đề cử</span>
                       <UnCheckSort />
                     </div>
-                    <div className="sort-select-item">
+                    <div className="sort-select-item" onClick={()=> this.selectSort('Bán chạy')}>
                       <span>Bán chạy</span>
                       <UnCheckSort />
                     </div>
-                    <div className="sort-select-item">
+                    <div className="sort-select-item" onClick={()=> this.selectSort('Giá thấp')}>
                       <span>Giá thấp</span>
                       <UnCheckSort />
                     </div>
-                    <div className="sort-select-item">
+                    <div className="sort-select-item" onClick={()=> this.selectSort('Giá cao')}>
                       <span>Giá cao</span>
                       <UnCheckSort />
                     </div>
-                    <div className="sort-select-item">
+                    <div className="sort-select-item" onClick={()=> this.selectSort('Lượt yêu thích')}>
                       <span>Lượt yêu thích</span>
                       <UnCheckSort />
                     </div>

@@ -34,6 +34,30 @@ class Test extends Component {
 const map1 = this.state.data.map(x => x);
 
 console.log(map1[0]?.name);
+var homes = [
+    {
+        "h_id": "3",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75201",
+        "price": "7"
+    }, {
+        "h_id": "4",
+        "city": "Bevery Hills",
+        "state": "CA",
+        "zip": "90210",
+        "price": "4"
+    }, {
+        "h_id": "5",
+        "city": "New York",
+        "state": "NY",
+        "zip": "00010",
+        "price": "9"
+    }
+];
+var t = homes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price))
+homes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+console.log(t)
         return (
             <>
             <button onClick={() => this.addArr('123')}>
