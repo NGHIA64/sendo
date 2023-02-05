@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import btnScrollToTop from "../../img/btn-scroll-to-top.svg";
-import { data } from "./data";
 import AdsProduct from "./adsProduct";
 import UnChecked from "../../comon/component/UnChecked";
 import Checked from "../../comon/component/Checked";
@@ -28,7 +27,8 @@ class Body extends Component {
     name: "",
     conditionFilter: [],
     sortSelect: false,
-    sortValue: ''
+    sortValue: '',
+    data: []
   };
   showSortSelect(event) {
     console.log('ok')
@@ -90,16 +90,26 @@ class Body extends Component {
       sortValue: value
     })
   }
+  async componentDidMount() {
+    try{
+      const response = await fetch('https://sendo-58uy.onrender.com/products')
+      const product = await response.json()
+        this.setState({ data: product });
+    }catch(err){
+      console.log(err)
+    }
+}
   render() {
     var filter;
     // console.log(this.props);
     console.log(this.props.test);
-    console.log();
-    filter = data.allProduct.filter((notification) =>
+    const test = this.state.data.map( x => x)
+    console.log(test);
+    filter = test.filter((notification) =>
       notification.name.includes(this.props.test)
     );
     if (this.state.conditionFilter.length != 0) {
-      filter = data.allProduct.filter((item) =>
+      filter = test.filter((item) =>
         this.state.conditionFilter.includes(item.shop.ware_house_region_name)
       );
       document.getElementById("ads-product").style.display = "none";
@@ -125,7 +135,7 @@ class Body extends Component {
     }
     console.log(this.conditionFilter);
     return (
-      <div className="body">
+      <div className="body .not-black-out">
         <div className="content">
           <div className="top-body">
             <div className="top-body-title">
@@ -1409,32 +1419,32 @@ class Body extends Component {
                   return (
                     <>
                       <a className="product-item">
-                        <img src={item.image} />
+                        <img src={item?.image} />
                         <div className="info-product">
                           <div className="branch">
                             <img src="https://media3.scdn.vn/img4/2021/10_21/mFcIndYzGOkBpNH6w5oN.png" />
                           </div>
                           <div className="name">
                             <img src="https://media3.scdn.vn/img4/2020/07_30/h6fJaiL5WkEbDU2eQRZb.png" />
-                            <span>{item.name}</span>
+                            <span>{item?.name}</span>
                           </div>
                           <div className="sale">
                             <span>{`${this.numberWithCommas(
-                              item.default_price_min
+                              item?.default_price_min
                             )}đ`}</span>
-                            <div>{this.checkPercent(item.sale_percent)}</div>
+                            <div>{this.checkPercent(item?.sale_percent)}</div>
                           </div>
                           <div className="price">{`${this.numberWithCommas(
-                            item.sale_price_max
+                            item?.sale_price_max
                           )}đ`}</div>
                           <div className="tra-gop">
                             <img src="https://media3.scdn.vn/img4/2022/06_24/V5PHsdxRbMf35yH1KO0h.png" />
                             Trả góp Kredivo
                           </div>
-                          <div className="sold">Đã bán {item.sold}</div>
+                          <div className="sold">Đã bán {item?.sold}</div>
                           <div className="quality">
                             <div>
-                              <span>{item.rated.star}/5</span>
+                              <span>{item?.rated?.star}/5</span>
                               <svg
                                 width="12"
                                 height="12"
@@ -1448,7 +1458,7 @@ class Body extends Component {
                               </svg>
                             </div>
                             <div className="adress">
-                              {item.shop.ware_house_region_name}
+                              {item?.shop?.ware_house_region_name}
                             </div>
                           </div>
                         </div>

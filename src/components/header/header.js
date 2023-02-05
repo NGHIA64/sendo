@@ -14,8 +14,10 @@ class Header extends Component {
     // console.log(event.target.value);
     this.setState({
       input: value,
+      data: []
     });
   }
+  
   checkInput(event) {
     event.preventDefault();
     var form = document.getElementById("myForm");
