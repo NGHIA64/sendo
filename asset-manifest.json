@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sendo/static/css/main.265e3aef.css",
-    "main.js": "/sendo/static/js/main.48560954.js",
+    "main.js": "/sendo/static/js/main.87600361.js",
     "static/js/787.8f750fdc.chunk.js": "/sendo/static/js/787.8f750fdc.chunk.js",
     "static/media/logo.svg": "/sendo/static/media/logo.f2d24ffb0b78ef7ab5d08e8f18ce4f08.svg",
     "index.html": "/sendo/index.html",
@@ -9,11 +9,11 @@
     "static/media/cart.svg": "/sendo/static/media/cart.205c42b4c1d8adb22492c8938932311e.svg",
     "static/media/btn-scroll-to-top.svg": "/sendo/static/media/btn-scroll-to-top.b40b2d2a4041c61423f24a00d4c33587.svg",
     "main.265e3aef.css.map": "/sendo/static/css/main.265e3aef.css.map",
-    "main.48560954.js.map": "/sendo/static/js/main.48560954.js.map",
+    "main.87600361.js.map": "/sendo/static/js/main.87600361.js.map",
     "787.8f750fdc.chunk.js.map": "/sendo/static/js/787.8f750fdc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.265e3aef.css",
-    "static/js/main.48560954.js"
+    "static/js/main.87600361.js"
   ]
 }
