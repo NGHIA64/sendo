@@ -109,9 +109,6 @@ class Body extends Component {
     var filter;
     const test = this.state.data.map((x) => x);
     console.log(test);
-    filter = test.filter((notification) =>
-      notification.name.includes(this.props.test)
-    );
     if (this.state.conditionFilter.length != 0) {
       filter = test.filter((item) =>
         this.state.conditionFilter.includes(item.shop.ware_house_region_name)
@@ -142,6 +139,9 @@ class Body extends Component {
           filter.sort( (a, b) => parseFloat(b?.rated?.star) - parseFloat(a?.rated?.star))
           break;
       }
+      filter = test.filter((notification) =>
+      notification.name.includes(this.props.test)
+    );
     console.log(this.conditionFilter);
     return (
       <div className="body .not-black-out">
@@ -243,7 +243,7 @@ class Body extends Component {
                 </div>
               </div>
               <hr />
-              <div className="item-filter">
+              <div className="item-filter" >
                 <div className="header-filter">
                   <span>Phương thức vận chuyển</span>
                   <button className="block">
@@ -265,58 +265,37 @@ class Body extends Component {
                   </button>
                 </div>
                 <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Hỏa tốc")}
+                  >
+                    {this.state.conditionFilter?.includes("Hỏa tốc") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Hỏa tốc</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Nhanh")}
+                  >
+                    {this.state.conditionFilter?.includes("Nhanh") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Nhanh</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Tiêu chuẩn")}
+                  >
+                    {this.state.conditionFilter?.includes("Tiêu chuẩn") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Tiêu chuẩn</span>
                   </div>
                 </div>
@@ -344,76 +323,48 @@ class Body extends Component {
                   </button>
                 </div>
                 <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "SenMall")}
+                  >
+                    {this.state.conditionFilter?.includes("SenMall") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>SenMall</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Shop+")}
+                  >
+                    {this.state.conditionFilter?.includes("Shop+") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Shop+</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Shop tự giao")}
+                  >
+                    {this.state.conditionFilter?.includes("Shop tự giao") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Shop tự giao</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Shop uy tín")}
+                  >
+                    {this.state.conditionFilter?.includes("Shop uy tín") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
                     <span>Shop uy tín</span>
                   </div>
                 </div>
@@ -441,59 +392,49 @@ class Body extends Component {
                   </button>
                 </div>
                 <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>SALE RỘN RÀNG</span>
+                <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "GIÁ TỐT TRONG NGÀY")}
+                  >
+                    {this.state.conditionFilter?.includes("GIÁ TỐT TRONG NGÀY") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
+                    <span>GIÁ TỐT TRONG NGÀY</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>NÂNG TẦM KHÔNG GIAN SỐNG</span>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "VALENTIN SĂN DEAL NGỌT NGÀO")}
+                  >
+                    {this.state.conditionFilter?.includes("VALENTIN SĂN DEAL NGỌT NGÀO") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
+                    <span>VALENTIN SĂN DEAL NGỌT NGÀO</span>
                   </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Siêu voucher tháng 1</span>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Flash Sale")}
+                  >
+                    {this.state.conditionFilter?.includes("Flash Sale") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
+                    <span>Flash Sale</span>
+                  </div>
+                  <div
+                    className="body-filter-item"
+                    onClick={(event) => this.selectFilter(event, "Siêu voucher tháng")}
+                  >
+                    {this.state.conditionFilter?.includes("Siêu voucher tháng") ? (
+                      <Checked />
+                    ) : (
+                      <UnChecked />
+                    )}
+                    <span>Siêu voucher tháng</span>
                   </div>
                 </div>
                 <div className="footer-filter">
@@ -1404,23 +1345,43 @@ class Body extends Component {
                   <div className="sort-select block" id="sort-select">
                     <div className="sort-select-item" onClick={()=> this.selectSort('Đề cử')}>
                       <span>Đề cử</span>
+                      {this.state.sortValue?.includes("Đề cử") ? (
+                      <CheckSort />
+                    ) : (
                       <UnCheckSort />
+                    )}
                     </div>
                     <div className="sort-select-item" onClick={()=> this.selectSort('Bán chạy')}>
                       <span>Bán chạy</span>
+                      {this.state.sortValue?.includes("Bán chạy") ? (
+                      <CheckSort />
+                    ) : (
                       <UnCheckSort />
+                    )}
                     </div>
                     <div className="sort-select-item" onClick={()=> this.selectSort('Giá thấp')}>
                       <span>Giá thấp</span>
+                      {this.state.sortValue?.includes("Giá thấp") ? (
+                      <CheckSort />
+                    ) : (
                       <UnCheckSort />
+                    )}
                     </div>
                     <div className="sort-select-item" onClick={()=> this.selectSort('Giá cao')}>
                       <span>Giá cao</span>
+                      {this.state.sortValue?.includes("Giá cao") ? (
+                      <CheckSort />
+                    ) : (
                       <UnCheckSort />
+                    )}
                     </div>
                     <div className="sort-select-item" onClick={()=> this.selectSort('Lượt yêu thích')}>
                       <span>Lượt yêu thích</span>
+                      {this.state.sortValue?.includes("Lượt yêu thích") ? (
+                      <CheckSort />
+                    ) : (
                       <UnCheckSort />
+                    )}
                     </div>
                   </div>
                 </div>
