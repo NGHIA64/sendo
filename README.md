@@ -1,4 +1,4 @@
-# SENDO CLONE SEARCH FILTER
+# SENDO CLONE FILTER
 
 Demo: [https://nghia64.github.io/sendo/](https://nghia64.github.io/sendo/)
 
