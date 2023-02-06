@@ -19,24 +19,6 @@ class Body extends Component {
       return;
     }
   }
-  componentDidMount() {
-    window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-    this.setState({ showButton: true });
-    } else {
-    this.setState({ showButton: false });
-    }
-    });
-    }
-  scrollToTop = () => {
-    console.log('okkkkkkkkkk')
-    window.scrollTo({
-    top: 0,
-    left:0,
-    behavior: "smooth", // for smoothly scrolling
-    });
-    };
-  
   checkPrice(x) {
     if (x) {
       return `${this.numberWithCommas(x)}đ`;
@@ -119,32 +101,47 @@ class Body extends Component {
       array.splice(index, 1);
     }
   }
-  selectFilter(event, value) {
-    var itemFilter = event.target;
-    let pushArr = this.state.conditionFilter;
-    if (this.isInArray(value, pushArr)) {
-      this.removeElement(pushArr, value);
-    } else {
-      pushArr.push(value);
-    }
+  async selectFilter(event, value) {
+    try {
+      let pushArr = this.state.conditionFilter;
+      if (this.isInArray(value, pushArr)) {
+        this.removeElement(pushArr, value);
+      } else {
+        pushArr.push(value);
+      }
+      const response = await fetch("http://localhost:3001/products/"+pushArr);
+      const product = await response.json();
+      this.setState({ data: product, isLoaded: true });
+      document.getElementById("ads-product").style.display = "none";
     this.setState({
       conditionFilter: pushArr,
     });
     console.log(this.state.conditionFilter);
     console.log(event);
+    } catch (err) {
+      console.log(err);
+    }
+    
   }
-  selectSort(value) {
-    this.setState({
-      sortValue: value,
-      sortSelect: false
-    });
-    document.getElementById('sort-select').style.display='none'
-    document.querySelector(".sort>div").style = "border: 1px solid #cfd2d4;";
-    document.getElementById("ads-product").style.display = "none";
+ async selectSort(value) {
+    try {
+      if(this.state.conditionFilter.length != 0){
+        var response = await fetch(`http://localhost:3001/sort/${value}/${this.state.conditionFilter}`);
+      }else{
+        var response = await fetch(`http://localhost:3001/all/${value}`);
+      }
+      const product = await response.json();
+      this.setState({ data: product, isLoaded: true, sortValue: value, sortSelect: false });
+      document.getElementById('sort-select').style.display='none'
+      document.querySelector(".sort>div").style = "border: 1px solid #cfd2d4;";
+      document.getElementById("ads-product").style.display = "none";
+    } catch (err) {
+      console.log(err);
+    }
   }
   async componentDidMount() {
     try {
-      const response = await fetch("https://sendo-58uy.onrender.com/products");
+      const response = await fetch("http://localhost:3001/products");
       const product = await response.json();
       this.setState({ data: product, isLoaded: true });
     } catch (err) {
@@ -154,41 +151,10 @@ class Body extends Component {
   render() {    
     const test = this.state.data.map((x) => x);
     var filter = test
-    console.log(this.state.exspand);
-    if (this.state.conditionFilter.length != 0) {
-      filter = test.filter((item) =>
-        this.state.conditionFilter.includes(item.shop.ware_house_region_name)
-      );
-      document.getElementById("ads-product").style.display = "none";
-    }
-      switch (this.state.sortValue) {
-        case "Đề cử":
-          if (this.state.conditionFilter.length != 0) {
-            filter = test.filter((item) =>
-              this.state.conditionFilter.includes(item.shop.ware_house_region_name)
-            );
-            document.getElementById("ads-product").style.display = "none";
-          }else{
-            filter = test
-          }
-          break;
-        case "Bán chạy":
-          filter.sort( (a, b) => parseFloat(b?.sold) - parseFloat(a?.sold))
-          break;
-        case "Giá thấp":
-          filter.sort( (a, b) => parseFloat(a?.sale_price_max) - parseFloat(b?.sale_price_max))
-          break;
-        case "Giá cao":
-          filter.sort( (a, b) => parseFloat(b?.sale_price_max) - parseFloat(a?.sale_price_max))
-          break;
-        case "Lượt yêu thích":
-          filter.sort( (a, b) => parseFloat(b?.rated?.star) - parseFloat(a?.rated?.star))
-          break;
-      }
-    if(this.props.test!=''){  filter = test.filter((notification) =>
-      notification.name.includes(this.props.test)
-    );}
-    console.log(this.conditionFilter);
+    // if(this.props.test!=''){  filter = test.filter((notification) =>
+    //   notification.name.includes(this.props.test)
+    // );}
+    // console.log(this.conditionFilter);
     return (
       <div className="body .not-black-out">
         <div className="content">
