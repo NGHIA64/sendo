@@ -529,9 +529,9 @@ class Body extends Component {
                       );
                     })}
                   </div>
-                  <div className="footer-sidebar">
+                  {filter.length != 0 ? (<div className="footer-sidebar">
                     <button className="btn-xem-them-product">Xem thêm</button>
-                  </div>
+                  </div>) : (<></>)}
                 </>
               )}
             </div>
