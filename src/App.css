@@ -545,7 +545,6 @@ input {
     display: flex;
     justify-content: center;
     z-index: 100;
-    display: none;
     cursor: pointer;
 }
 
@@ -563,7 +562,6 @@ input {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    display: none;
 }
 
 .btn-chat-support>span {
