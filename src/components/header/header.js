@@ -8,16 +8,17 @@ class Header extends Component {
     input: "",
     qr: false,
     contactHeader: false,
-    checkDonHang: false
+    checkDonHang: false,
+    proposal: false
   };
   changeSate(value) {
     // console.log(event.target.value);
     this.setState({
       input: value,
-      data: []
+      data: [],
     });
   }
-  
+
   checkInput(event) {
     event.preventDefault();
     var form = document.getElementById("myForm");
@@ -30,8 +31,8 @@ class Header extends Component {
     if (this.state.qr == false) {
       this.setState({
         qr: true,
-        contactHeader:false,
-        checkDonHang:false
+        contactHeader: false,
+        checkDonHang: false,
       });
       document.getElementById("qr").style.display = "flex";
       document.getElementById("checkDonHang").style.display = "none";
@@ -47,8 +48,8 @@ class Header extends Component {
     if (this.state.contactHeader == false) {
       this.setState({
         contactHeader: true,
-        qr:false,
-        checkDonHang:false
+        qr: false,
+        checkDonHang: false,
       });
       document.getElementById("header-contact").style.display = "block";
       document.getElementById("checkDonHang").style.display = "none";
@@ -60,13 +61,34 @@ class Header extends Component {
       document.getElementById("header-contact").style.display = "none";
     }
   }
+  showProposal(event) {
+    console.log("ok");
+    if (this.state.proposal == false) {
+      this.setState({
+        proposal: true,
+      });
+      document.getElementById("proposal").style.display = "block";
+    } else {
+      this.setState({
+        proposal: false,
+      });
+      document.getElementById("proposal").style.display = "none";
+    }
+  }
+  proposal(value){
+    document.getElementById('input').value = value
+    this.setState({
+      proposal: false,
+    });
+    document.getElementById("proposal").style.display = "none";
+  }
   showCheckDonHang(event) {
-    console.log('ok')
+    console.log("ok");
     if (this.state.checkDonHang == false) {
       this.setState({
         checkDonHang: true,
         contactHeader: false,
-        qr:false
+        qr: false,
       });
       document.getElementById("checkDonHang").style.display = "grid";
       document.getElementById("header-contact").style.display = "none";
@@ -101,12 +123,18 @@ class Header extends Component {
                   <div>Trả hàng hoàn tiền</div>
                 </div>
               </div>
-              <div className="checkDonHang" onClick={(event) => this.showCheckDonHang(event)}>
+              <div
+                className="checkDonHang"
+                onClick={(event) => this.showCheckDonHang(event)}
+              >
                 Kiểm tra đơn hàng
                 <div id="checkDonHang" className="block">
                   <form>
-                    <input placeholder="Nhập mã đơn hàng" className="block"/>
-                    <input placeholder="Email / Số điện thoại" className="block"/>
+                    <input placeholder="Nhập mã đơn hàng" className="block" />
+                    <input
+                      placeholder="Email / Số điện thoại"
+                      className="block"
+                    />
                     <button className="block">Kiểm tra</button>
                   </form>
                 </div>
@@ -123,7 +151,46 @@ class Header extends Component {
                   <img src={menu} />
                 </div>
                 <form className="search-form" id="myForm">
-                  <input className="input-search block" id="input" />
+                  <div>
+                    <input className="input-search block" id="input" onClick={(event) => this.showProposal(event)} autoComplete="off"/>
+                    <div id="proposal" className="block">
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam thể thao')}>giày nam thể thao</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam sneaker')}>giày nam sneaker</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam cao cấp')}>giày nam cao cấp</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam da bò')}>giày nam da bò</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam trắng')}>giày nam trắng</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam nike')}>giày nam nike</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam cổ cao')}>giày nam cổ cao</div>
+                      <hr/>
+                      <div className="proposal-title">Tìm kiếm cửa hàng</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam order')}>giày nam order</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Nam 2H')}>Giày Nam 2H</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Nam Đep')}>Giày Nam Đep</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Nam Đẹp')}>Giày Nam Đẹp</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Đức Nam')}>Giày Đức Nam</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Nam FenShoes')}>Giày Nam FenShoes</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('GIÀY NAM ZATA')}>GIÀY NAM ZATA</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('Giày Nam ROSI')}>Giày Nam ROSI</div>
+                      <hr/>
+                      <div className="proposal-title">Xu hướng tìm kiếm</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('tai nghe bluetooth')}>tai nghe bluetooth</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('vay tiền nhanh')}>vay tiền nhanh</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giàn phun viên')}>giàn phun viên</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('thẻ game garena')}>thẻ game garena</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('quần lót nữ')}>quần lót nữ</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('máy massage cầm tay')}>máy massage cầm tay</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày lười nam')}>giày lười nam</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('khẩu trang')}>khẩu trang</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('máy rửa xe cao áp')}>máy rửa xe cao áp</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày nam')}>giày nam</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('pháo hoa 36 quả')}>pháo hoa 36 quả</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('quần đùi nam')}>quần đùi nam</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('máy bay điều khiển')}>máy bay điều khiển</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('giày thể thao nam')}>giày thể thao nam</div>
+                      <div className="proposal-item" onClick={(value) => this.proposal('loa vi tính')}>loa vi tính</div>
+
+                    </div>
+                  </div>
                   <button
                     className="btn-search block"
                     onClick={(event) => this.checkInput(event)}
