@@ -102,6 +102,10 @@ class Body extends Component {
     }
   }
   async selectFilter(event, value) {
+    this.setState({
+      isLoaded: false
+    })
+    console.log(this.state.isLoaded)
     try {
       let pushArr = this.state.conditionFilter;
       if (this.isInArray(value, pushArr)) {
@@ -124,6 +128,9 @@ class Body extends Component {
     
   }
  async selectSort(value) {
+  this.setState({
+    isLoaded: false
+  })
     try {
       if(this.state.conditionFilter.length != 0){
         var response = await fetch(`http://localhost:3001/sort/${value}/${this.state.conditionFilter}`);
