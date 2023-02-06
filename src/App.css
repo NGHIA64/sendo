@@ -409,6 +409,15 @@ html {
     width: 100%;
     box-shadow: 0 -4px 16px 0 rgb(0 0 0 / 10%), 0 8px 16px 0 rgb(0 0 0 / 10%);
 }
+.showDisPlayBock{
+    display: block;
+}
+.showDisplayGrid{
+    display: grid;
+}
+.closeDisplay{
+    display: none;
+}
 .proposal-item{
     font-weight: 700;
     color: #6f787e;
@@ -536,6 +545,8 @@ input {
     display: flex;
     justify-content: center;
     z-index: 100;
+    display: none;
+    cursor: pointer;
 }
 
 .btn-scroll-to-top>img {}
@@ -552,6 +563,7 @@ input {
     justify-content: center;
     align-items: center;
     z-index: 100;
+    display: none;
 }
 
 .btn-chat-support>span {
@@ -610,6 +622,9 @@ input {
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
 }
+.header-filter>button:hover{
+    background-color:#f2f3f4;
+}
 
 .body-filter {
     margin-top: 0.8rem;
@@ -639,23 +654,30 @@ input {
     text-overflow: ellipsis;
 }
 
-.footer-filter {
-    display: flex;
-    align-items: center;
-    margin-top: 0.8rem;
-    margin-left: auto;
-    margin-right: auto;
+.footer-filter-item {
     padding: 0.6rem 0.7rem;
     border: 1px solid #fff;
     justify-content: center;
     cursor: pointer;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    border-radius: 4px;
 }
 
-.footer-filter:hover{
+.footer-filter{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-filter-item:hover{
     background-color: #f2f3f4;
 }
 
-.footer-filter>span {
+.footer-filter-item>span {
     margin-left: 0.8rem;
     font-size: 14px;
     color: #3f4b53;
@@ -1214,12 +1236,14 @@ button, input {
     display: grid;
     grid-row-gap: 1.6rem;
     grid-column-gap: 2.6rem;
+    
 }
 .filter-color > button{
     height: 2.4rem;
     width: 2.4rem;
     border: 1px solid #cfd2d4;
-    border-radius: 4px
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 

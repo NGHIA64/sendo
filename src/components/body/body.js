@@ -5,6 +5,9 @@ import UnChecked from "../../comon/component/UnChecked";
 import Checked from "../../comon/component/Checked";
 import CheckSort from "../../comon/component/checkSort";
 import UnCheckSort from "../../comon/component/uncheckSort";
+import Exspand from "../../comon/component/exspand";
+import Collapse from "../../comon/component/collapse";
+import { data_filter } from "./filter";
 class Body extends Component {
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -16,6 +19,24 @@ class Body extends Component {
       return;
     }
   }
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+    this.setState({ showButton: true });
+    } else {
+    this.setState({ showButton: false });
+    }
+    });
+    }
+  scrollToTop = () => {
+    console.log('okkkkkkkkkk')
+    window.scrollTo({
+    top: 0,
+    left:0,
+    behavior: "smooth", // for smoothly scrolling
+    });
+    };
+  
   checkPrice(x) {
     if (x) {
       return `${this.numberWithCommas(x)}đ`;
@@ -30,6 +51,9 @@ class Body extends Component {
     sortValue: "Đề cử",
     data: [],
     isLoaded: false,
+    exspand: [],
+    viewAllFilter: [],
+    showButton: false,
   };
   showSortSelect(event) {
     console.log("ok");
@@ -47,6 +71,28 @@ class Body extends Component {
       document.getElementById("sort-select").style.display = "none";
       document.querySelector(".sort>div").style = "border: 1px solid #cfd2d4;";
     }
+  }
+  viewAllFilter(value){
+    let pushArr = this.state.viewAllFilter;
+    if (this.isInArray(value, pushArr)) {
+      this.removeElement(pushArr, value);
+    } else {
+      pushArr.push(value);
+    }
+    this.setState({
+      viewAllFilter: pushArr,
+    });
+  }
+  exspand(value){
+    let pushArr = this.state.exspand;
+    if (this.isInArray(value, pushArr)) {
+      this.removeElement(pushArr, value);
+    } else {
+      pushArr.push(value);
+    }
+    this.setState({
+      exspand: pushArr,
+    });
   }
   props = {
     test: "",
@@ -108,7 +154,7 @@ class Body extends Component {
   render() {    
     const test = this.state.data.map((x) => x);
     var filter = test
-    console.log(test);
+    console.log(this.state.exspand);
     if (this.state.conditionFilter.length != 0) {
       filter = test.filter((item) =>
         this.state.conditionFilter.includes(item.shop.ware_house_region_name)
@@ -156,307 +202,84 @@ class Body extends Component {
           </div>
           <div className="main-body">
             <div className="right-body">
-              <div className="item-filter">
+              {data_filter.map( (item, index) => {
+                if(item.attribute_name && item.attribute_name != 'Màu sắc' && item.attribute_name != 'Khoảng giá' && item.attribute_name != 'Đánh giá'){
+                  return <>
+                  <div className="item-filter">
                 <div className="header-filter">
-                  <span>Địa điểm</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
+                  <span>{item.attribute_name}</span>
+                  <button className="block" onClick={(event) => this.exspand(item.attribute_name)}>
+                  {this.state.exspand?.includes(item.attribute_name) ? (
+                      <Exspand/>
+                    ) : (
+                      <Collapse/>
+                    )}
                   </button>
                 </div>
-                <div className="body-filter">
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Hà Nội")}
-                  >
-                    {this.state.conditionFilter?.includes("Hà Nội") ? (
-                      <Checked />
+                {!this.state.exspand?.includes(item.attribute_name) ? (
+                      <div className="body-filter">
+                       {this.state.viewAllFilter?.includes(item.attribute_name) ? (<>
+                        {item.attribute_value.map( (item, index) => {
+                          return <div
+                          className="body-filter-item"
+                          onClick={(event) => this.selectFilter(event, item.option_name)}
+                        >
+                          {this.state.conditionFilter?.includes(item.option_name) ? (
+                            <Checked />
+                          ) : (
+                            <UnChecked />
+                          )}
+                          <span>{item.option_name}</span>
+                        </div>
+                        })}</>) : (<>{item.attribute_value.slice(0, 4).map( (item, index) => {
+                          return <div
+                          className="body-filter-item"
+                          onClick={(event) => this.selectFilter(event, item.option_name)}
+                        >
+                          {this.state.conditionFilter?.includes(item.option_name) ? (
+                            <Checked />
+                          ) : (
+                            <UnChecked />
+                          )}
+                          <span>{item.option_name}</span>
+                        </div>
+                        })}</>)}
+                    </div>
                     ) : (
-                      <UnChecked />
+                      <></>
                     )}
-                    <span>Hà Nội</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Hồ Chí Minh")}
-                  >
-                    {this.state.conditionFilter?.includes("Hồ Chí Minh") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Hồ Chí Minh</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Lâm Đồng")}
-                  >
-                    {this.state.conditionFilter?.includes("Lâm Đồng") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Lâm Đồng</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Đà Nẵng")}
-                  >
-                    {this.state.conditionFilter?.includes("Đà Nẵng") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Đà Nẵng</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
+                
+                {item.attribute_value.length < 5 ? (<></>) : (<><div className="footer-filter" onClick={() => this.viewAllFilter(item.attribute_name)}>
+                {this.state.viewAllFilter?.includes(item.attribute_name) ? (
+                          <div className="footer-filter-item">
+                          <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" class="d7ed-SwZDZ2 d7ed-w34diS"><path fill="#3f4b53" fill-rule="nonzero" d="M22 11v2H2v-2z"></path></svg>
+                      <span>Thu gọn</span>
+                        </div>
+                        ) : (
+                          <div className="footer-filter-item">
+                            <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xlink="http://www.w3.org/1999/xlink"
+                          class="d7ed-SwZDZ2 d7ed-w34diS"
+                        >
+                          <path
+                            fill="#3f4b53"
+                            fill-rule="nonzero"
+                            d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
+                          ></path>
+                        </svg>
+                        <span>Xem thêm</span>
+                          </div>
+                        )}
+                </div></>)}
               </div>
-              <hr />
-              <div className="item-filter" >
-                <div className="header-filter">
-                  <span>Phương thức vận chuyển</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Hỏa tốc")}
-                  >
-                    {this.state.conditionFilter?.includes("Hỏa tốc") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Hỏa tốc</span>
-                  </div>
-                <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Nhanh")}
-                  >
-                    {this.state.conditionFilter?.includes("Nhanh") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Nhanh</span>
-                  </div>
-                <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Tiêu chuẩn")}
-                  >
-                    {this.state.conditionFilter?.includes("Tiêu chuẩn") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Tiêu chuẩn</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Loại shop</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "SenMall")}
-                  >
-                    {this.state.conditionFilter?.includes("SenMall") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>SenMall</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Shop+")}
-                  >
-                    {this.state.conditionFilter?.includes("Shop+") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Shop+</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Shop tự giao")}
-                  >
-                    {this.state.conditionFilter?.includes("Shop tự giao") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Shop tự giao</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Shop uy tín")}
-                  >
-                    {this.state.conditionFilter?.includes("Shop uy tín") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Shop uy tín</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Ưu đãi</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "GIÁ TỐT TRONG NGÀY")}
-                  >
-                    {this.state.conditionFilter?.includes("GIÁ TỐT TRONG NGÀY") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>GIÁ TỐT TRONG NGÀY</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "VALENTIN SĂN DEAL NGỌT NGÀO")}
-                  >
-                    {this.state.conditionFilter?.includes("VALENTIN SĂN DEAL NGỌT NGÀO") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>VALENTIN SĂN DEAL NGỌT NGÀO</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Flash Sale")}
-                  >
-                    {this.state.conditionFilter?.includes("Flash Sale") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Flash Sale</span>
-                  </div>
-                  <div
-                    className="body-filter-item"
-                    onClick={(event) => this.selectFilter(event, "Siêu voucher tháng")}
-                  >
-                    {this.state.conditionFilter?.includes("Siêu voucher tháng") ? (
-                      <Checked />
-                    ) : (
-                      <UnChecked />
-                    )}
-                    <span>Siêu voucher tháng</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
-              </div>
-              <hr />
+              <hr /></>
+                }
+              })}
               <div className="item-filter">
                 <div className="header-filter">
                   <span>Khoảng giá</span>
@@ -500,7 +323,8 @@ class Body extends Component {
                     <span>550K - 1M</span>
                   </div>
                   <div className="footer-filter">
-                    <svg
+                   <div className="footer-filter-item">
+                   <svg
                       width="16"
                       height="16"
                       viewBox="0 0 24 24"
@@ -516,6 +340,7 @@ class Body extends Component {
                       ></path>
                     </svg>
                     <span>Xem thêm</span>
+                   </div>
                   </div>
                 </div>
               </div>
@@ -598,721 +423,6 @@ class Body extends Component {
                   <button
                     style={{ backgroundColor: "rgb(255, 128, 64)" }}
                   ></button>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Loại đế</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Đế bệt</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Đế cao</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Đế bánh mì</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Đế độn</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Độ cao</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>{"<"} 5 cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Đế cao</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>từ 5 - dưới 7cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>từ 7 - 10 cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>{">"} 10 cm</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Chiều cao</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Dưới 3cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>3cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>5cm</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>4cm</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Chất liệu</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Vải</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Nhiều chất liệu</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Cao su</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Da bò</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Kích thước</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>35</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>37</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>38</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>42</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Xuất xứ</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Thái Lan</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Việt Nam</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Hàn Quốc</span>
-                  </div>
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Indonesia</span>
-                  </div>
-                </div>
-                <div className="footer-filter">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    version="1.1"
-                    xlink="http://www.w3.org/1999/xlink"
-                    class="d7ed-SwZDZ2 d7ed-w34diS"
-                  >
-                    <path
-                      fill="#3f4b53"
-                      fill-rule="nonzero"
-                      d="M13 11h9v2h-9v9h-2v-9H2v-2h9V2h2z"
-                    ></path>
-                  </svg>
-                  <span>Xem thêm</span>
-                </div>
-              </div>
-              <hr />
-              <div className="item-filter">
-                <div className="header-filter">
-                  <span>Bộ lọc khác</span>
-                  <button className="block">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-w34diS"
-                    >
-                      <path
-                        fill="#3f4b53"
-                        fill-rule="nonzero"
-                        d="M12 10.786L6.476 16 5 14.607 12 8l7 6.607L17.524 16z"
-                      ></path>
-                    </svg>
-                  </button>
-                </div>
-                <div className="body-filter">
-                  <div className="body-filter-item">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      version="1.1"
-                      xlink="http://www.w3.org/1999/xlink"
-                      class="d7ed-SwZDZ2 d7ed-ong_OF"
-                    >
-                      <path
-                        d="M18.545 4C19.35 4 20 4.796 20 5.778v12.444c0 .982-.651 1.778-1.455 1.778H5.455C4.65 20 4 19.204 4 18.222V5.778C4 4.796 4.651 4 5.455 4h13.09zM18 6H6v12h12V6z"
-                        fill="#6F787E"
-                        fill-rule="nonzero"
-                      ></path>
-                    </svg>
-                    <span>Có video</span>
-                  </div>
                 </div>
               </div>
               <hr />
@@ -1454,7 +564,8 @@ class Body extends Component {
             </div>
           </div>
         </div>
-        <div className="btn-scroll-to-top block">
+        <div className="btn-scroll-to-top block" onClick={this.scrollToTop}>
+
           <img src={btnScrollToTop} />
         </div>
         <div className="btn-chat-support block">
