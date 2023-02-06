@@ -158,9 +158,9 @@ class Body extends Component {
   render() {    
     const test = this.state.data.map((x) => x);
     var filter = test
-    // if(this.props.test!=''){  filter = test.filter((notification) =>
-    //   notification.name.includes(this.props.test)
-    // );}
+    if(this.props.test!=''){  filter = test.filter((notification) =>
+      notification.name.includes(this.props.test)
+    );}
     // console.log(this.conditionFilter);
     return (
       <div className="body .not-black-out">
