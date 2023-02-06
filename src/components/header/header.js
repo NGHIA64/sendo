@@ -152,7 +152,7 @@ class Header extends Component {
                 </div>
                 <form className="search-form" id="myForm">
                   <div>
-                    <input className="input-search block" id="input" onClick={(event) => this.showProposal(event)} autoComplete="off"/>
+                    <input className="input-search block" id="input" onClick={(event) => this.showProposal(event)} autoComplete="off" type="search"/>
                     <div id="proposal" className="block">
                       <div className="proposal-item" onClick={(value) => this.proposal('giày nam thể thao')}>giày nam thể thao</div>
                       <div className="proposal-item" onClick={(value) => this.proposal('giày nam sneaker')}>giày nam sneaker</div>
