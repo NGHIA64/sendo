@@ -113,7 +113,7 @@ class Body extends Component {
       } else {
         pushArr.push(value);
       }
-      const response = await fetch("https://sendo-58uy.onrender.com/products/"+pushArr);
+      const response = await fetch("https://backend-sendo.onrender.com/products/"+pushArr);
       const product = await response.json();
       this.setState({ data: product, isLoaded: true });
       document.getElementById("ads-product").style.display = "none";
@@ -133,9 +133,9 @@ class Body extends Component {
   })
     try {
       if(this.state.conditionFilter.length != 0){
-        var response = await fetch(`https://sendo-58uy.onrender.com/sort/${value}/${this.state.conditionFilter}`);
+        var response = await fetch(`https://backend-sendo.onrender.com/sort/${value}/${this.state.conditionFilter}`);
       }else{
-        var response = await fetch(`https://sendo-58uy.onrender.com/all/${value}`);
+        var response = await fetch(`https://backend-sendo.onrender.com/all/${value}`);
       }
       const product = await response.json();
       this.setState({ data: product, isLoaded: true, sortValue: value, sortSelect: false });
@@ -148,7 +148,7 @@ class Body extends Component {
   }
   async componentDidMount() {
     try {
-      const response = await fetch("https://sendo-58uy.onrender.com/products");
+      const response = await fetch("https://backend-sendo.onrender.com/products");
       const product = await response.json();
       this.setState({ data: product, isLoaded: true });
     } catch (err) {
